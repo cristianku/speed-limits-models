@@ -29,8 +29,9 @@ Every frame, `speedvisiond` runs the model and publishes `speedVisionSP`:
 0 means "not sure": sunnypilot's Speed Limit Source then takes the map, exactly as when a car reads no sign. The order,
 strongest first:
 
-1. a speed sign read now (also inside a car park) → that limit;
-2. a car park recognised → 0, and the limit remembered from the road before is dropped;
+1. a speed sign read now → that limit (inside a car park see 2);
+2. a car park recognised → 15 km/h, a sign read there only when lower; the limit remembered from the road before is
+   dropped (a car park has no legal limit, but the map often has none there either: 0 could let the car speed up);
 3. the limit remembered from the last sign → that limit;
 4. the general limit after the sign that starts it (in Switzerland "50 generell", the motorway or expressway start),
    no speed sign since, road type sure → that general limit;
