@@ -26,9 +26,15 @@ Every frame, `speedvisiond` runs the model and publishes `speedVisionSP`:
 | `limit_kph` | out | `[1]` float | the limit in force, or 0 when the model is not sure |
 | `state_out` | out | `[16]` float | passed back as `state_in` on the next frame |
 
-0 means "not sure": sunnypilot's Speed Limit Source then takes the map, exactly as when a car reads no sign. The model
-gives a limit only from a sign it read, or the general limit of the road after the sign that starts it (in
-Switzerland "50 generell", the motorway or expressway start) when no speed sign followed.
+0 means "not sure": sunnypilot's Speed Limit Source then takes the map, exactly as when a car reads no sign. The order,
+strongest first:
+
+1. a speed sign read now (also inside a car park) → that limit;
+2. a car park recognised → 0, and the limit remembered from the road before is dropped;
+3. the limit remembered from the last sign → that limit;
+4. the general limit after the sign that starts it (in Switzerland "50 generell", the motorway or expressway start),
+   no speed sign since, road type sure → that general limit;
+5. anything else → 0.
 
 The limit is advisory input to sunnypilot's Speed Limit Assist, chosen in Settings › Speed Limit › Signs Read By;
 nothing here controls the car.
