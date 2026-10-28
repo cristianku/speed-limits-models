@@ -37,5 +37,5 @@ strongest first:
    no speed sign since, road type sure → that general limit;
 5. anything else → 0.
 
-The limit is advisory input to sunnypilot's Speed Limit Assist, chosen in Settings › Speed Limit › Signs Read By;
+The limit is advisory input to sunnypilot's Speed Limit Assist, chosen in Speed Limit Source › Map Data + Vision;
 nothing here controls the car.
