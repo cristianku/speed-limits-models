@@ -1,5 +1,12 @@
 {
-  "format": 1,
-  "model": null,
-  "version": null
+  "format": 2,
+  "version": "2026-10-28",
+  "finder": {
+    "file": "signnet.onnx",
+    "contract": "signnet.onnx.contract.json"
+  },
+  "classifier": {
+    "file": "classifier.onnx",
+    "contract": "classifier.onnx.contract.json"
+  }
 }

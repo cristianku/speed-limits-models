@@ -1,0 +1,100 @@
+{
+  "architecture": "mobilenet_v3_small",
+  "checkpoint": "classifier:2026-10-26_1921-classifier/classifier",
+  "checkpoint_sha256": "92d9eb20df0a88d8e90efcb49bcfc53ee883212a67ea88af6e8acfec872da492",
+  "dataset_sha256": "dfbb8cf2a54fb61474f7a9e0360448805de5b752d85568fa8f0405ff91963243",
+  "input": {
+    "color": "RGB",
+    "dtype": "float32",
+    "layout": "NCHW",
+    "name": "images",
+    "normalization": {
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "resize": [
+      160,
+      160
+    ],
+    "shape": [
+      1,
+      3,
+      160,
+      160
+    ],
+    "source": "reviewed_bbox_crop"
+  },
+  "onnx_sha256": "13f4b1791e988e20c67e79ba5bb8c3f1ef7f55d9c88b330d5fd671f37f6a40a5",
+  "output": {
+    "classes": [
+      "cancellation",
+      "maximum_speed:10",
+      "maximum_speed:100",
+      "maximum_speed:15",
+      "maximum_speed:20",
+      "maximum_speed:30",
+      "maximum_speed:40",
+      "maximum_speed:50",
+      "maximum_speed:60",
+      "maximum_speed:80",
+      "maximum_speed:unknown",
+      "not_a_sign",
+      "other_sign",
+      "other_sign:danger_other",
+      "other_sign:direction_left",
+      "other_sign:direction_right",
+      "other_sign:direction_several",
+      "other_sign:direction_straight",
+      "other_sign:give_way",
+      "other_sign:height_limit",
+      "other_sign:keep_left",
+      "other_sign:keep_right",
+      "other_sign:main_road",
+      "other_sign:motorway_start",
+      "other_sign:no_entry",
+      "other_sign:no_overtaking",
+      "other_sign:one_way",
+      "other_sign:other",
+      "other_sign:pedestrian_crossing",
+      "other_sign:priority_to_right",
+      "other_sign:roundabout",
+      "other_sign:town_entry",
+      "other_sign:weight_limit",
+      "road_marking:30",
+      "road_marking:unknown",
+      "unreadable",
+      "variable_display:100",
+      "variable_display:80",
+      "variable_display:unknown",
+      "zone:30",
+      "zone:unknown"
+    ],
+    "decode": "argmax",
+    "dtype": "float32",
+    "name": "logits",
+    "shape": [
+      1,
+      41
+    ]
+  },
+  "schema_version": 1,
+  "split_sha256": "b0c47a5827cf03b83b3cad496d0bbc84d0dc1fb21b66d175d4254a642fa2d895",
+  "task": "reader",
+  "training_initialization": "imagenet1k_v1",
+  "verification": {
+    "atol": 1e-05,
+    "enabled": true,
+    "max_abs_error": 9.47713851928711e-06,
+    "passed": true,
+    "provider": "CPUExecutionProvider",
+    "rtol": 0.0001
+  }
+}

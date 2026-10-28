@@ -1,0 +1,55 @@
+{
+  "checkpoint": "data/runs/2026-10-28_1028-signnet-twothirds-s8-f1/signnet-best.pt",
+  "checkpoint_sha256": "00efd032dfe3795e3e0640f63c3625237384cf2073cf132c7928311dd88ad5ac",
+  "epoch": 27,
+  "fuse_kernel": 1,
+  "input": {
+    "dtype": "float32",
+    "layout": "RGB; the road frame scaled to the band width, its top rows (the band)",
+    "name": "images",
+    "range": [
+      0.0,
+      1.0
+    ],
+    "shape": [
+      1,
+      3,
+      288,
+      896
+    ]
+  },
+  "onnx_sha256": "ba7f31024a8f284e110b61f0d890fca603e0aa6aea53ef704b4cdd21037fdbe3",
+  "output": {
+    "channels": [
+      "heat",
+      "log_width",
+      "log_height",
+      "offset_x",
+      "offset_y"
+    ],
+    "decode": "a sign at each 3x3 local maximum of heat above the score wanted; its centre ((x + offset_x) * stride, (y + offset_y) * stride) and size (exp(log_width), exp(log_height)), in band pixels; the frame scale is frame width / band width",
+    "name": "out",
+    "shape": [
+      1,
+      5,
+      36,
+      112
+    ]
+  },
+  "stride": 8,
+  "task": "signnet",
+  "verification": {
+    "atol": 1e-05,
+    "enabled": true,
+    "max_abs_error": 2.6226043701171875e-06,
+    "passed": true,
+    "provider": "CPUExecutionProvider",
+    "rtol": 0.0001
+  },
+  "widths": [
+    16,
+    24,
+    32,
+    48
+  ]
+}
