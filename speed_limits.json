@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-10-28",
+  "version": "2026-10-29",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"
@@ -8,5 +8,9 @@
   "classifier": {
     "file": "classifier.onnx",
     "contract": "classifier.onnx.contract.json"
+  },
+  "road_type": {
+    "file": "road-type.onnx",
+    "contract": "road-type.onnx.contract.json"
   }
 }

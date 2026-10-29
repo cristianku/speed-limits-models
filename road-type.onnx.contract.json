@@ -1,0 +1,275 @@
+{
+  "architecture": "mobilenet_v3_small+gru",
+  "car_input": {
+    "camera": "VISION_STREAM_ROAD (the narrow road camera), the whole frame: 1344 x 760 on the comma 4, as the frames of the dataset (frames.jsonl width 1344, height 760, camera_stream narrow_road)",
+    "decode": "road_type = classes[argmax(probabilities)], classes exactly road_types.ROAD_TYPES (town, rural, expressway, motorway, ramp, parking); feed SpeedLimitMemory.update(road_type=...) only after the same class 3 steps in a row (the measure's debounce). \"ramp\" is an on- or off-ramp: ramp then motorway or expressway is the merge, where the ramp's limit ends without a sign",
+    "junction_decode": "passed = junction[0, 1]; an intersection is passed when passed >= 0.5 and the previous step was below; at most one event in 3 s. A false \"passed\" lifts the limit of a sign (Poland: a sign holds to the next intersection): use it only where the law says so, never in place of a sign that ends a limit",
+    "motion": {
+      "cereal": {
+        "blinkers": "carState.leftBlinker, carState.rightBlinker",
+        "speed": "carState.vEgo",
+        "steer": "carState.steeringAngleDeg",
+        "yaw": "livePose.angularVelocityDevice.z (rad/s, device frame, z down: yaw = -z) and .valid; this sunnypilot names the service deviceMotion; fallback carState.yawRate (rad/s, left positive)"
+      },
+      "fields": [
+        "heading_change",
+        "yaw_max",
+        "yaw_known",
+        "steer",
+        "steer_known",
+        "left_blinker",
+        "right_blinker",
+        "blinker_known"
+      ],
+      "never": "a map field: the vision side reads the camera and the car only",
+      "summary": {
+        "blinker_seconds": 2.0,
+        "min_samples": 10,
+        "steer_clip": 4.0,
+        "steer_scale": 180.0,
+        "step_seconds": 1.0,
+        "yaw_clip": 3.0,
+        "yaw_scale": 30.0
+      }
+    },
+    "rate": "one step a second (the training frames are 1 s apart; 2 Hz would make its memory twice as fast: keep 1 Hz)",
+    "steps": [
+      "y, uv = vision.nv12_planes(buf.data, buf.width, buf.height, buf.stride, buf.uv_offset)",
+      "planes = vision.yuv_to_rgb(y, uv, 0, buf.height, 0, buf.width)  # uint8 (3, 760, 1344), ffmpeg BT.601 limited range, as the dataset PNGs",
+      "planes = vision.resize(planes, 256, 144)  # PIL BILINEAR (antialiased), columns then rows: bit-exact with the training cache (road_type_data.resized_frame)",
+      "image = planes[None].astype(np.float32) / 255.0  # (1, 3, 144, 256) RGB 0..1, NCHW: no mean/std, the network normalises inside",
+      "speed = [[min(max(vEgo, 0), 60.0) / 30.0, 1.0]]  # carState.vEgo m/s; [[0, 0]] when unknown",
+      "age = now - memory._road_sign_at  # speedvisiond's SpeedLimitMemory: when it last confirmed other_sign:motorway_start or expressway_start (read 5 times a second, MIN_CONFIDENCE, CONFIRM_FRAMES within CONFIRM_SECONDS); -inf before the first: age inf",
+      "sign = [[min(age, 120) / 60, 1.0]] if age <= 120 else [[2.0, 0.0]]  # road_type_signs.sign_features",
+      "Subscribe to livePose (named deviceMotion in this sunnypilot, 20 Hz) and carState (100 Hz); at each step t take the samples of the last second (t - 1 s, t]",
+      "yaw: the samples with angularVelocityDevice.valid; at least 10 of them: yaw_dps = mean(-degrees(angularVelocityDevice.z)) (the device z points down; left positive, the heading change of the step in degrees), yaw_max = max(|degrees(z)|); fewer: from carState.yawRate (rad/s, left positive) the same way when the car fills it (not always 0); else unknown",
+      "steer = mean(carState.steeringAngleDeg) over the step (left positive); left / right = carState.leftBlinker / rightBlinker true at any sample of the last 2 s; with fewer than 10 carState samples in the step all of these are unknown",
+      "motion = [[clip(yaw_dps / 30, -3, 3), clip(yaw_max / 30, 0, 3), 1, clip(steer / 180, -4, 4), 1, left, right, 1]]  # car_motion.motion_features; an unknown part is all zeros, its known flag 0 (yaw: 0..2, steer: 3..4, blinkers: 5..7). Never a map field: the car's own signals only",
+      "hidden = zeros((1, 128), float32) at the start of the drive (and after more than 5 s without a step); then the hidden_out of the previous step; junction_hidden the same with junction_hidden_out",
+      "probabilities, hidden, junction, junction_hidden = session.run(None, {\"image\": image, \"speed\": speed, \"sign\": sign, \"motion\": motion, \"hidden\": hidden, \"junction_hidden\": junction_hidden})"
+    ]
+  },
+  "checkpoint": "road_type:2026-10-29_1533-road-type-motion/road-type/gru",
+  "checkpoint_sha256": "579740606a02cd398e9cb3e8b928fdf96609b3fd729847d216ee042c8b97026b",
+  "dataset_sha256": "1043c41e8edd32751a11ea2d2e99172895d83841853e2214868c70b2c578875d",
+  "epoch": 43,
+  "input": {
+    "color": "RGB",
+    "dtype": "float32",
+    "layout": "NCHW",
+    "name": "image",
+    "normalization": "none: ImageNet mean and std are applied inside the network",
+    "range": "0..1",
+    "resize": {
+      "crop": "none, the whole frame",
+      "from": [
+        1344,
+        760
+      ],
+      "method": "PIL BILINEAR (antialiased), vision.resize",
+      "to": [
+        256,
+        144
+      ]
+    },
+    "shape": [
+      1,
+      3,
+      144,
+      256
+    ],
+    "source": "narrow road camera NV12 -> vision.yuv_to_rgb -> vision.resize"
+  },
+  "inputs": [
+    {
+      "dtype": "float32",
+      "name": "image",
+      "shape": [
+        1,
+        3,
+        144,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": [
+        "min(max(vEgo m/s, 0), 60.0) / 30.0",
+        "1 when the speed is known, else 0 (and the first value 0)"
+      ],
+      "name": "speed",
+      "shape": [
+        1,
+        2
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": [
+        "min(age, 120) / 60: age = seconds since SpeedLimitMemory last confirmed a motorway or expressway sign (now - _road_sign_at)",
+        "1 when that is at most 120 s ago, else 0; never or longer ago: [2.0, 0.0]"
+      ],
+      "name": "sign",
+      "shape": [
+        1,
+        2
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": [
+        "heading change of the last second: mean yaw rate deg/s (left positive) / 30, clipped to +-3",
+        "largest |yaw rate| in it deg/s / 30, clipped to 0..3",
+        "1 when the yaw is known (livePose valid, else carState.yawRate), else 0 (and both values 0)",
+        "mean carState.steeringAngleDeg of the last second / 180, clipped to +-4 (left positive)",
+        "1 when carState is known, else 0 (and the steering 0)",
+        "1 when carState.leftBlinker was on in the last 2 s",
+        "1 when carState.rightBlinker was on in the last 2 s",
+        "1 when carState is known (the blinkers), else 0"
+      ],
+      "name": "motion",
+      "names": [
+        "heading_change",
+        "yaw_max",
+        "yaw_known",
+        "steer",
+        "steer_known",
+        "left_blinker",
+        "right_blinker",
+        "blinker_known"
+      ],
+      "shape": [
+        1,
+        8
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": "the memory: zeros at the start, then the previous step's hidden_out",
+      "name": "hidden",
+      "shape": [
+        1,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": "the junction head's own memory: zeros at the start, then the previous step's junction_hidden_out",
+      "name": "junction_hidden",
+      "shape": [
+        1,
+        128
+      ]
+    }
+  ],
+  "onnx_sha256": "5a705a68d2025f3428b87f99426ba8ae0c2ca30c28678974db433a7e32cc053c",
+  "output": {
+    "classes": [
+      "town",
+      "rural",
+      "expressway",
+      "motorway",
+      "ramp",
+      "parking"
+    ],
+    "decode": "softmax probabilities; the class is the argmax",
+    "name": "probabilities",
+    "shape": [
+      1,
+      6
+    ]
+  },
+  "outputs": [
+    {
+      "dtype": "float32",
+      "name": "probabilities",
+      "shape": [
+        1,
+        6
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": "give it back as hidden at the next step",
+      "name": "hidden_out",
+      "shape": [
+        1,
+        128
+      ]
+    },
+    {
+      "decode": "passed = junction[0, 1]; an intersection is passed when passed >= 0.5 and the previous step was below; at most one event in 3 s. A false \"passed\" lifts the limit of a sign (Poland: a sign holds to the next intersection): use it only where the law says so, never in place of a sign that ends a limit",
+      "dtype": "float32",
+      "meaning": [
+        "the probability that the car is inside an intersection of public roads (sigmoid)",
+        "the probability that it has just left one: the first second after it (sigmoid)"
+      ],
+      "name": "junction",
+      "names": [
+        "in_junction",
+        "passed"
+      ],
+      "operating": {
+        "decode": "passed",
+        "threshold": 0.5
+      },
+      "shape": [
+        1,
+        2
+      ]
+    },
+    {
+      "dtype": "float32",
+      "meaning": "give it back as junction_hidden at the next step",
+      "name": "junction_hidden_out",
+      "shape": [
+        1,
+        128
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "split_sha256": "a1681d1cef42d5c9b082ea509d7bab1674c8766df0963ba84d43f93bafdebf5a",
+  "step": {
+    "inputs": [
+      "image",
+      "speed",
+      "sign",
+      "motion",
+      "hidden",
+      "junction_hidden"
+    ],
+    "junction_branch": "separate",
+    "junctions": true,
+    "memory": "gru",
+    "motion": true,
+    "outputs": [
+      "probabilities",
+      "hidden_out",
+      "junction",
+      "junction_hidden_out"
+    ],
+    "rate_hz": 1.0,
+    "signs": true,
+    "speed_source": "v_ego"
+  },
+  "task": "road_type",
+  "verification": {
+    "atol": 1e-05,
+    "enabled": true,
+    "max_abs_error": 1.0132789611816406e-06,
+    "passed": true,
+    "provider": "CPUExecutionProvider",
+    "rollout": {
+      "checked": true,
+      "first_key": "4/30",
+      "max_abs_error": 1.1175870895385742e-05,
+      "motion_seconds": 60,
+      "route": "00000125--6d7bcedee2",
+      "same_answer": 60,
+      "seconds": 60,
+      "sign_seconds": 30
+    },
+    "rtol": 0.0001
+  }
+}

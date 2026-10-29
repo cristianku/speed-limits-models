@@ -1,5 +1,5 @@
 {
-  "checkpoint": "data/runs/2026-10-28_1028-signnet-twothirds-s8-f1/signnet-best.pt",
+  "checkpoint": "cutter:2026-10-28_1028-signnet-twothirds-s8-f1/signnet",
   "checkpoint_sha256": "00efd032dfe3795e3e0640f63c3625237384cf2073cf132c7928311dd88ad5ac",
   "epoch": 27,
   "fuse_kernel": 1,

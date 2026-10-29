@@ -92,7 +92,7 @@
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 9.47713851928711e-06,
+    "max_abs_error": 7.152557373046875e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rtol": 0.0001
