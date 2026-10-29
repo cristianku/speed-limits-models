@@ -5,9 +5,10 @@ The neural networks that read Swiss speed-limit signs from the road camera of a 
 [`sunnypilot.speedlimits`](https://github.com/cristianku/sunnypilot.speedlimits).
 
 sunnypilot takes this repository as a git submodule at `openpilot/sunnypilot/speed_limits/models`, the way it takes
-its lateral models from `neural_network_data`. The device compiles the ONNX files for its GPU with tinygrad the first
-time it needs them (offroad, a minute or two), not the build: a network that fails to compile leaves only the speed
-limit reading out. A new model is a commit here and a move of the submodule pointer in the branch.
+its lateral models from `neural_network_data`. The device compiles the ONNX files for its GPU with tinygrad in the build
+it runs at boot after an update (a minute or two each, only for networks it has not compiled yet), else offroad or in
+speedvisiond; a network that fails to compile never fails the build and leaves only the speed limit reading out. A new
+model is a commit here and a move of the submodule pointer in the branch.
 
 ## What is here
 
