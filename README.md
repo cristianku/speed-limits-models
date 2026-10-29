@@ -16,6 +16,11 @@ limit reading out. A new model is a commit here and a move of the submodule poin
   to 896 wide, RGB 0..1. Output `out` `(1, 5, 36, 112)`: a heat map at stride 8 and the size of the sign there.
 - `classifier.onnx`: the classifier. Input `images` `(1, 3, 160, 160)`, the crop of a box found by SignNet,
   ImageNet-normalised. Output `logits` `(1, 41)`; the classes are in its contract (`output.classes`).
+- `road-type.onnx` (when `speed_limits.json` has `road_type`): the road-type network, one step a second with its
+  memory. Inputs `image` `(1, 3, 144, 256)`, the whole road frame resized, RGB 0..1; `speed`, `sign` (seconds since
+  a motorway or expressway sign), `motion` (the car's turn, steering and blinkers) and the memories `hidden`,
+  `junction_hidden` `(1, 128)`. Output `probabilities` `(1, 6)` over town, rural, expressway, motorway, ramp, parking
+  (its contract, `output.classes`) and the memories for the next step. The camera and the car only: never the map.
 - `*.onnx.contract.json`: each network's inputs, outputs, preprocessing and the hash of its ONNX.
 
 ## How sunnypilot uses them (format 2)
@@ -29,7 +34,16 @@ Speed Limit Source is Map Data + Vision. On each frame:
 3. a value becomes the limit when two frames within 1.5 s read it; it stays until another value is confirmed
    (two values at once: the one seen most, then the lower).
 
-It publishes `speedVisionSP` (`speedLimit` in m/s, 0 when there is no reading yet). The preprocessing is the
+Once a second the road-type network sees the whole frame; its answer counts after 3 equal steps. Where no sign gives
+the limit, the scene does:
+
+- a car park (and the car under 25 km/h for 5 s) → 15 km/h, a sign there only when lower;
+- out of the car park, or at the start of a drive with nothing read yet → the general limit of the road it sees
+  (in Switzerland a town 50, rural 80, expressway 100, motorway 120);
+- the limit of the scene follows another kind of road after 10 s of it; a sign read always wins over the scene.
+
+It publishes `speedVisionSP` (`speedLimit` in m/s, 0 when there is no reading yet; `roadType`, what the road-type
+network sees). The preprocessing is the
 training's, bit for bit: ffmpeg's YUV to RGB and Pillow's bilinear resize.
 
 The reading is shown on the screen and is advisory input to sunnypilot's Speed Limit Assist in Speed Limit Source ›
@@ -56,4 +70,6 @@ strongest first:
 3. the limit remembered from the last sign → that limit;
 4. the general limit after the sign that starts it (in Switzerland "50 generell", the motorway or expressway start),
    no speed sign since, road type sure → that general limit;
-5. anything else → 0.
+5. no sign read on this road (the start of a drive, out of a car park), road type sure → the general limit of the
+   road the scene shows (a town 50);
+6. anything else → 0.
