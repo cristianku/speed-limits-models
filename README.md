@@ -37,7 +37,7 @@ Speed Limit Source is Map Data + Vision. On each frame:
 Once a second the road-type network sees the whole frame; its answer counts after 3 equal steps. Where no sign gives
 the limit, the scene does:
 
-- a car park (and the car under 25 km/h for 5 s) → 15 km/h, a sign there only when lower;
+- a car park (and the car under 25 km/h for 5 s) → 10 km/h, a sign there only when lower;
 - out of the car park, or at the start of a drive with nothing read yet → the general limit of the road it sees
   (in Switzerland a town 50, rural 80, expressway 100, motorway 120);
 - the limit of the scene follows another kind of road after 10 s of it; a sign read always wins over the scene.
@@ -65,7 +65,7 @@ The goal is one ONNX with the whole chain, the memory included (plain tensor ope
 strongest first:
 
 1. a speed sign read now → that limit (inside a car park see 2);
-2. a car park recognised → 15 km/h, a sign read there only when lower; the limit remembered from the road before is
+2. a car park recognised → 10 km/h, a sign read there only when lower; the limit remembered from the road before is
    dropped (a car park has no legal limit, but the map often has none there either: 0 could let the car speed up);
 3. the limit remembered from the last sign → that limit;
 4. the general limit after the sign that starts it (in Switzerland "50 generell", the motorway or expressway start),
