@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-10-29",
+  "version": "2026-10-30",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"
@@ -12,5 +12,17 @@
   "road_type": {
     "file": "road-type.onnx",
     "contract": "road-type.onnx.contract.json"
+  },
+  "settings": {
+    "min_confidence": 0.7,
+    "confirm_frames": 2,
+    "confirm_seconds": 1.5,
+    "road_type_debounce": 3,
+    "road_type_seconds": 10.0,
+    "zone_confidence": 0.9,
+    "parking_seconds": 5.0,
+    "parking_limit": 10.0,
+    "ramp_seconds": 45.0,
+    "merge_seconds": 8.0
   }
 }

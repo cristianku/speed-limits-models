@@ -2,8 +2,8 @@
   "architecture": "mobilenet_v3_small+gru",
   "car_input": {
     "camera": "VISION_STREAM_ROAD (the narrow road camera), the whole frame: 1344 x 760 on the comma 4, as the frames of the dataset (frames.jsonl width 1344, height 760, camera_stream narrow_road)",
-    "decode": "road_type = classes[argmax(probabilities)], classes exactly road_types.ROAD_TYPES (town, rural, expressway, motorway, ramp, parking); feed SpeedLimitMemory.update(road_type=...) only after the same class 3 steps in a row (the measure's debounce). \"ramp\" is an on- or off-ramp: ramp then motorway or expressway is the merge, where the ramp's limit ends without a sign",
-    "junction_decode": "passed = junction[0, 1]; an intersection is passed when passed >= 0.5 and the previous step was below; at most one event in 3 s. A false \"passed\" lifts the limit of a sign (Poland: a sign holds to the next intersection): use it only where the law says so, never in place of a sign that ends a limit",
+    "decode": "road_type = classes[argmax(probabilities)], classes exactly the contract's classes (road_types.ROAD_TYPES when trained: town, rural, expressway, motorway, ramp, parking, zone30); feed SpeedLimitMemory.update(road_type=...) only after the same class 3 steps in a row (the measure's debounce). \"ramp\" is an on- or off-ramp: ramp then motorway or expressway is the merge, where the ramp's limit ends without a sign",
+    "junction_decode": "passed = junction[0, 1]; an intersection is passed when passed >= 0.7 and the previous step was below; at most one event in 3 s. A false \"passed\" lifts the limit of a sign (Poland: a sign holds to the next intersection): use it only where the law says so, never in place of a sign that ends a limit",
     "motion": {
       "cereal": {
         "blinkers": "carState.leftBlinker, carState.rightBlinker",
@@ -45,14 +45,14 @@
       "yaw: the samples with angularVelocityDevice.valid; at least 10 of them: yaw_dps = mean(-degrees(angularVelocityDevice.z)) (the device z points down; left positive, the heading change of the step in degrees), yaw_max = max(|degrees(z)|); fewer: from carState.yawRate (rad/s, left positive) the same way when the car fills it (not always 0); else unknown",
       "steer = mean(carState.steeringAngleDeg) over the step (left positive); left / right = carState.leftBlinker / rightBlinker true at any sample of the last 2 s; with fewer than 10 carState samples in the step all of these are unknown",
       "motion = [[clip(yaw_dps / 30, -3, 3), clip(yaw_max / 30, 0, 3), 1, clip(steer / 180, -4, 4), 1, left, right, 1]]  # car_motion.motion_features; an unknown part is all zeros, its known flag 0 (yaw: 0..2, steer: 3..4, blinkers: 5..7). Never a map field: the car's own signals only",
-      "hidden = zeros((1, 128), float32) at the start of the drive (and after more than 5 s without a step); then the hidden_out of the previous step; junction_hidden the same with junction_hidden_out",
-      "probabilities, hidden, junction, junction_hidden = session.run(None, {\"image\": image, \"speed\": speed, \"sign\": sign, \"motion\": motion, \"hidden\": hidden, \"junction_hidden\": junction_hidden})"
+      "hidden = zeros((1, 128), float32) at the start of the drive (and after more than 5 s without a step); then the hidden_out of the previous step",
+      "probabilities, hidden, junction = session.run(None, {\"image\": image, \"speed\": speed, \"sign\": sign, \"motion\": motion, \"hidden\": hidden})"
     ]
   },
-  "checkpoint": "road_type:2026-10-29_1533-road-type-motion/road-type/gru",
-  "checkpoint_sha256": "579740606a02cd398e9cb3e8b928fdf96609b3fd729847d216ee042c8b97026b",
-  "dataset_sha256": "1043c41e8edd32751a11ea2d2e99172895d83841853e2214868c70b2c578875d",
-  "epoch": 43,
+  "checkpoint": "road_type:2026-10-30_1216-road-type/road-type/gru",
+  "checkpoint_sha256": "9e4e75e282a84f94ebe7b27599bf569dc49560da9418ee2640eaedb4252758cb",
+  "dataset_sha256": "738c7e0c9479425eeb2d3c4b6a0f7545d15e0e76d089f5e50bbc3bbfe312a8aa",
+  "epoch": 14,
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -151,18 +151,9 @@
         1,
         128
       ]
-    },
-    {
-      "dtype": "float32",
-      "meaning": "the junction head's own memory: zeros at the start, then the previous step's junction_hidden_out",
-      "name": "junction_hidden",
-      "shape": [
-        1,
-        128
-      ]
     }
   ],
-  "onnx_sha256": "5a705a68d2025f3428b87f99426ba8ae0c2ca30c28678974db433a7e32cc053c",
+  "onnx_sha256": "fe6afd821d6011696da2a939f3b34e65b3caa9870d64108f8b0067e835f6bd5e",
   "output": {
     "classes": [
       "town",
@@ -170,13 +161,14 @@
       "expressway",
       "motorway",
       "ramp",
-      "parking"
+      "parking",
+      "zone30"
     ],
     "decode": "softmax probabilities; the class is the argmax",
     "name": "probabilities",
     "shape": [
       1,
-      6
+      7
     ]
   },
   "outputs": [
@@ -185,7 +177,7 @@
       "name": "probabilities",
       "shape": [
         1,
-        6
+        7
       ]
     },
     {
@@ -198,7 +190,7 @@
       ]
     },
     {
-      "decode": "passed = junction[0, 1]; an intersection is passed when passed >= 0.5 and the previous step was below; at most one event in 3 s. A false \"passed\" lifts the limit of a sign (Poland: a sign holds to the next intersection): use it only where the law says so, never in place of a sign that ends a limit",
+      "decode": "passed = junction[0, 1]; an intersection is passed when passed >= 0.7 and the previous step was below; at most one event in 3 s. A false \"passed\" lifts the limit of a sign (Poland: a sign holds to the next intersection): use it only where the law says so, never in place of a sign that ends a limit",
       "dtype": "float32",
       "meaning": [
         "the probability that the car is inside an intersection of public roads (sigmoid)",
@@ -211,43 +203,32 @@
       ],
       "operating": {
         "decode": "passed",
-        "threshold": 0.5
+        "threshold": 0.7
       },
       "shape": [
         1,
         2
       ]
-    },
-    {
-      "dtype": "float32",
-      "meaning": "give it back as junction_hidden at the next step",
-      "name": "junction_hidden_out",
-      "shape": [
-        1,
-        128
-      ]
     }
   ],
   "schema_version": 1,
-  "split_sha256": "a1681d1cef42d5c9b082ea509d7bab1674c8766df0963ba84d43f93bafdebf5a",
+  "split_sha256": "241833fe69bb1bb88ec0e8bc0814939c501174c504ad09144d5e6e1e386f8884",
   "step": {
     "inputs": [
       "image",
       "speed",
       "sign",
       "motion",
-      "hidden",
-      "junction_hidden"
+      "hidden"
     ],
-    "junction_branch": "separate",
+    "junction_branch": "shared",
     "junctions": true,
     "memory": "gru",
     "motion": true,
     "outputs": [
       "probabilities",
       "hidden_out",
-      "junction",
-      "junction_hidden_out"
+      "junction"
     ],
     "rate_hz": 1.0,
     "signs": true,
@@ -257,13 +238,13 @@
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 1.0132789611816406e-06,
+    "max_abs_error": 1.1622905731201172e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rollout": {
       "checked": true,
       "first_key": "4/30",
-      "max_abs_error": 1.1175870895385742e-05,
+      "max_abs_error": 4.470348358154297e-06,
       "motion_seconds": 60,
       "route": "00000125--6d7bcedee2",
       "same_answer": 60,
