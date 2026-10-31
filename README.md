@@ -39,7 +39,7 @@ Once a second the road-type network sees the whole frame; its answer counts afte
 the limit, the scene does:
 
 - a car park (and the car under 25 km/h for 5 s) → 10 km/h, a sign there only when lower;
-- out of the car park (a road seen for 10 s: a moment of a street inside it keeps the car park), or at the start of
+- out of the car park (a road seen for 3 s: a moment of a street inside it keeps the car park), or at the start of
   a drive with nothing read yet → the general limit of the road it sees
   (in Switzerland a town 50, rural 80, expressway 100, motorway 120);
 - the limit of the scene follows another kind of road after 10 s of it; a sign read always wins over the scene.
