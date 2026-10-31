@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-10-31.2",
+  "version": "2026-10-31.3",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"
@@ -25,6 +25,7 @@
     "parking_limit": 20.0,
     "garage_limit": 10.0,
     "ramp_seconds": 45.0,
-    "merge_seconds": 8.0
+    "merge_seconds": 8.0,
+    "carriageway_lag": 5.0
   }
 }
