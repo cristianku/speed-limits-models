@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-11-04",
+  "version": "2026-11-05",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"
@@ -9,9 +9,9 @@
     "file": "classifier.onnx",
     "contract": "classifier.onnx.contract.json"
   },
-  "road_type": {
-    "file": "road-type.onnx",
-    "contract": "road-type.onnx.contract.json"
+  "brain": {
+    "file": "brain.onnx",
+    "contract": "brain.onnx.contract.json"
   },
   "settings": {
     "min_confidence": 0.7,
@@ -29,6 +29,13 @@
     "carriageway_lag": 5.0,
     "distance_lead_seconds": 0.34,
     "distance_lead_metres": 1.8,
-    "variable_display_diameter": 1.4
+    "variable_display_diameter": 1.4,
+    "country_policy": {
+      "gps_max_age_s": 5,
+      "gps_max_accuracy_m": 50,
+      "border_margin_m": 200,
+      "confirm_s": 10,
+      "max_sample_gap_s": 5
+    }
   }
 }
