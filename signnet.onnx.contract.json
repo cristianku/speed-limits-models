@@ -1,7 +1,7 @@
 {
-  "checkpoint": "cutter:2026-11-03_1859-cutter-mapillary/signnet",
-  "checkpoint_sha256": "a0f0b2e9dc23948804a36a502f8c09a0c1ba15c8037816d1e68683ee31a63b1e",
-  "epoch": 24,
+  "checkpoint": "cutter:2026-11-05_2247-cutter/signnet",
+  "checkpoint_sha256": "7e9c716cbcbff74692656bac6ec4ae0ea7d61363380511b80a0c0539d4aa0fc8",
+  "epoch": 7,
   "fuse_kernel": 1,
   "input": {
     "dtype": "float32",
@@ -18,7 +18,7 @@
       896
     ]
   },
-  "onnx_sha256": "ebc2f0f5b3abd65c1d542220a9ecc86eb3a24d0d2f9cb50504d305cf697a4404",
+  "onnx_sha256": "73a4d1654fb71c21305b5e11d4cde849c12187b531c5744fb3103d007470cac4",
   "output": {
     "channels": [
       "heat",
@@ -41,7 +41,7 @@
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 2.86102294921875e-06,
+    "max_abs_error": 2.384185791015625e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rtol": 0.0001

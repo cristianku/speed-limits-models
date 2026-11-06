@@ -1,7 +1,7 @@
 {
   "architecture": "mobilenet_v3_small+gru",
-  "checkpoint": "brain:2026-11-05_0925-brain-copy-s2/brain",
-  "checkpoint_sha256": "f17e05f8506e861eae75c16f7f10d4563f3e75d82546a720f40074953d6e8ca7",
+  "checkpoint": "brain:2026-11-06_0619-brain-s2/brain",
+  "checkpoint_sha256": "5cce41fa5bee544423a3024397b4a5943be0e6e97d3a310cdb64bd402f968dcb",
   "epoch": 39,
   "input": {
     "color": "RGB",
@@ -46,7 +46,7 @@
       "name": "extra",
       "shape": [
         1,
-        28
+        38
       ]
     },
     {
@@ -58,8 +58,8 @@
       ]
     }
   ],
-  "inputs_sha256": "29e3c8b0717884ee545da22ee27520c6a3366f11d4ac28d2028e96a016dcf467",
-  "onnx_sha256": "65e72a1d757a27d5b0c9a24e00cab666cfd00d2a69d7d0c02b6b7e1c45c70172",
+  "inputs_sha256": "1147b4ecbc7b9d9334ee29af5afb74c24a49c3aa2bc6f6eeb299754ce11f4244",
+  "onnx_sha256": "29f26fc5cdc8c018f39d1744f8e2ed50fb25ed2f7359eb1af87046973eb1d45c",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -136,6 +136,13 @@
       "carriageway_lag": 5.0,
       "confirm_frames": 2,
       "confirm_seconds": 1.5,
+      "country_policy": {
+        "border_margin_m": 200,
+        "confirm_s": 10,
+        "gps_max_accuracy_m": 50,
+        "gps_max_age_s": 5,
+        "max_sample_gap_s": 5
+      },
       "distance_lead_metres": 1.8,
       "distance_lead_seconds": 0.34,
       "garage_limit": 10.0,
@@ -152,7 +159,7 @@
     },
     "version": 2,
     "video_step": 5,
-    "vision": "d20d0c4c74e1ab867f16f6901ca5454fa9e0f803918b70d24f53a1c60b3c7308"
+    "vision": "72c88a0f5c981c25b9fed218a5bd49b85fc292df175e17fe0b34c80c0040925c"
   },
   "schema_version": 1,
   "split_sha256": "47162efbad46d10c17770b56b5ddb128c93806c29cbfa4992197220bfc83d0d3",
@@ -160,10 +167,14 @@
     "groups": [
       "signs",
       "plate",
+      "plate_hours",
       "hour",
       "lead",
-      "country"
+      "country",
+      "pedals",
+      "speed"
     ],
+    "hours": false,
     "inputs": [
       "image",
       "extra",
@@ -174,12 +185,13 @@
       "speed",
       "hidden_out"
     ],
+    "plates": false,
     "rate_hz": 1.0
   },
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 1.6689300537109375e-06,
+    "max_abs_error": 1.0460615158081055e-05,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rollout": {
@@ -190,7 +202,6 @@
         10,
         15,
         20,
-        40,
         50,
         60,
         70,

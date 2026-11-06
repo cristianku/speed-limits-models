@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-11-05",
+  "version": "2026-11-06",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"
@@ -28,7 +28,7 @@
     "merge_seconds": 8.0,
     "carriageway_lag": 5.0,
     "distance_lead_seconds": 0.34,
-    "distance_lead_metres": 1.8,
+    "distance_lead_metres": 6.8,
     "variable_display_diameter": 1.4,
     "country_policy": {
       "gps_max_age_s": 5,
