@@ -186,7 +186,8 @@
       "hidden_out"
     ],
     "plates": false,
-    "rate_hz": 1.0
+    "rate_hz": 1.0,
+    "wet": false
   },
   "task": "brain",
   "verification": {
