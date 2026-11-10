@@ -1,7 +1,7 @@
 {
   "architecture": "mobilenet_v3_small+gru",
-  "checkpoint": "brain:2026-11-10_0111-brain-s1/brain",
-  "checkpoint_sha256": "e414647d5f3a5249489e0b878986a90e6266d920f9b1024dc3a823ffeb32dcbc",
+  "checkpoint": "brain:2026-11-10_2051-brain-s2/brain",
+  "checkpoint_sha256": "da686eeeeb68286f7fe950fe0c5a2c592b6e6d6673427114a038a2f9ac6adbf5",
   "epoch": 39,
   "input": {
     "color": "RGB",
@@ -46,7 +46,7 @@
       "name": "extra",
       "shape": [
         1,
-        49
+        44
       ]
     },
     {
@@ -59,7 +59,7 @@
     }
   ],
   "inputs_sha256": "0d309056a32e48037e804302916398b71d4edd4fc765a62ea4906957d2d7e629",
-  "onnx_sha256": "9f280fd8da8e28583ed9b73227a29468180b22a84030099316cf778034dbbfa6",
+  "onnx_sha256": "ffc68a8126dc6b38d99850ff98729c1647d21545d61e5fa5ad3a9bea8fded133",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -309,19 +309,14 @@
     }
   ],
   "reader": {
-    "classifier": "572e4fa2878c1e5418a60d28d1690e5796de3fdfa8b41c10c626b3c2e115460c",
-    "finder": "d08a2eed356db50a3ca2c53fd439f5536467326a7351b3bc688b71f127cb6af8",
+    "applicability": "cc1584009e9d773a1fdf43c9d7270933aff9c5ed5804aec3c01dc07ff5a490d7",
+    "classifier": "0a5d2c12a4ddf2625044db6433c7db2f2276c221e0b53cae95937ffc21735a4a",
+    "decider": "dda32baa34a5de9a87bf1c5f562b9dc58f7befc86019b527b85ef8b30e091a26",
+    "finder": "6bf5a3b4e963559da0714fff9eff3b4cc7b6c820cea7007ab9d04011dd933117",
     "settings": {
       "carriageway_lag": 5.0,
       "confirm_frames": 2,
       "confirm_seconds": 1.5,
-      "country_policy": {
-        "border_margin_m": 200,
-        "confirm_s": 10,
-        "gps_max_accuracy_m": 50,
-        "gps_max_age_s": 5,
-        "max_sample_gap_s": 5
-      },
       "distance_lead_metres": 6.8,
       "distance_lead_seconds": 0.34,
       "garage_limit": 10.0,
@@ -336,9 +331,9 @@
       "variable_display_diameter": 1.4,
       "zone_confidence": 0.9
     },
-    "version": 3,
+    "version": 4,
     "video_step": 5,
-    "vision": "8fbb34184e79a1321e5cc39ae7f4034838ac8cfd9cc203dd798d8bf5ea64b3dc"
+    "vision": "fa87afe16c23fac6d6627e5b5e419f4540004446b0f5d5a53557d9e328aebfc4"
   },
   "schema_version": 1,
   "split_sha256": "47162efbad46d10c17770b56b5ddb128c93806c29cbfa4992197220bfc83d0d3",
@@ -351,8 +346,6 @@
       "hour",
       "lead",
       "country",
-      "pedals",
-      "speed",
       "plate_wet",
       "sign_distance",
       "motion"
@@ -378,7 +371,7 @@
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 5.9604644775390625e-06,
+    "max_abs_error": 7.62939453125e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rollout": {
@@ -387,7 +380,6 @@
       "other_speed": 0,
       "route": "0000012d--6552a45378",
       "said": [
-        4,
         5,
         6,
         7,
@@ -397,8 +389,6 @@
         11,
         12,
         13,
-        14,
-        15,
         16,
         17,
         18,
@@ -438,19 +428,12 @@
         52,
         53,
         54,
-        57,
-        58,
-        59,
         60,
-        61,
-        63,
         64,
         65,
         66,
-        67,
         68,
-        69,
-        71,
+        70,
         72,
         73,
         74,
@@ -487,15 +470,11 @@
         105,
         106,
         107,
-        108,
-        110,
+        115,
         116,
         117,
-        118,
         119,
-        120,
-        121,
-        123
+        121
       ]
     },
     "rtol": 0.0001

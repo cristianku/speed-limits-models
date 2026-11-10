@@ -1,9 +1,9 @@
 {
   "architecture": "context_full_mobilenet_v3_small",
   "boxes": 5,
-  "checkpoint": "decider:2026-11-10_0037-decider/experiment-b/full",
-  "checkpoint_sha256": "f6b46e01c1d098e73256b0decad0b9cd0e21fb77ca012d671bfa1f81bee6a759",
-  "dataset_sha256": "05eebf81483f6b21536eb77c8570356a707121d126e0545bd44fd8211ca48279",
+  "checkpoint": "decider:2026-11-10_1706-decider/experiment-b/full",
+  "checkpoint_sha256": "6a5f764959b920bf815c092c440274b4d43514ac3580871f44256cde572c994b",
+  "dataset_sha256": "d36c5f4cab4648df95b097751d66d2be30ab526f5fd5be9a32bd2be2cbbea0de",
   "inputs": {
     "crops": {
       "color": "RGB",
@@ -92,7 +92,7 @@
       "source": "the whole frame resized bilinear (PIL)"
     }
   },
-  "onnx_sha256": "ab51c3c669ab776b639f31d138eb94b6461a35fcdd68e2f35dbed2f543f16362",
+  "onnx_sha256": "dda32baa34a5de9a87bf1c5f562b9dc58f7befc86019b527b85ef8b30e091a26",
   "outputs": {
     "ownership": {
       "classes": [
@@ -120,7 +120,7 @@
     "maximum_speed_wet": "maximum_speed"
   },
   "schema_version": 1,
-  "split_sha256": "d9067e8e92ee54b61ad01e488a240bda7c4a269388100253dfc15daf4133fe01",
+  "split_sha256": "8d4e209c93cd368f16fd61bd9f00e69f1f6ea3f07b85124ba59d86eeffcf974a",
   "target": "car",
   "task": "decider",
   "training_initialization": "start",
@@ -133,7 +133,7 @@
       5
     ],
     "enabled": true,
-    "max_abs_error": 1.1026859283447266e-06,
+    "max_abs_error": 3.635883331298828e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "reference": "PyTorch with torchvision roi_align",

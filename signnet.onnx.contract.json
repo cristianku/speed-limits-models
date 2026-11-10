@@ -1,7 +1,7 @@
 {
-  "checkpoint": "cutter:2026-11-09_2306-cutter/signnet",
-  "checkpoint_sha256": "9fa38303338712fce297ab10e338fa7ffc4b955b752f8743b62e94b453c8f6a0",
-  "epoch": 1,
+  "checkpoint": "cutter:2026-11-10_1642-cutter/signnet",
+  "checkpoint_sha256": "571eaabecc3238c87359e830f419a1d847419c2d4fc84747bbd0e22accd3d098",
+  "epoch": 4,
   "fuse_kernel": 1,
   "input": {
     "dtype": "float32",
@@ -18,7 +18,7 @@
       896
     ]
   },
-  "onnx_sha256": "79598682ee669d889c74355223831f8c4b994ee6c39cdec8f78d8c3f27446b86",
+  "onnx_sha256": "6bf5a3b4e963559da0714fff9eff3b4cc7b6c820cea7007ab9d04011dd933117",
   "output": {
     "channels": [
       "heat",

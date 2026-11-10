@@ -1,8 +1,8 @@
 {
   "architecture": "mobilenet_v3_small",
-  "checkpoint": "classifier:2026-11-10_0017-classifier/classifier",
-  "checkpoint_sha256": "1635bbb9963985ccfe18063aa64f88723a4871344226e5f93c0020a83b26761a",
-  "dataset_sha256": "05eebf81483f6b21536eb77c8570356a707121d126e0545bd44fd8211ca48279",
+  "checkpoint": "classifier:2026-11-10_1546-classifier/classifier",
+  "checkpoint_sha256": "9d1c80e49414a6f8c0894595e63c1569f60c19ead4c16dddd698153eb7452ae5",
+  "dataset_sha256": "59d4c881f500a616a5b56d7175b40d72fe758e8ca5e1831a0652d891ebb929db",
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -32,7 +32,7 @@
     ],
     "source": "reviewed_bbox_crop"
   },
-  "onnx_sha256": "052ac10308a68aa070e5e8e10c680f81abe0633e3ff65c52f39f4267c11d383a",
+  "onnx_sha256": "0a5d2c12a4ddf2625044db6433c7db2f2276c221e0b53cae95937ffc21735a4a",
   "output": {
     "classes": [
       "cancellation",
@@ -96,13 +96,13 @@
     "unit_source": "runtime_country"
   },
   "schema_version": 1,
-  "split_sha256": "d9067e8e92ee54b61ad01e488a240bda7c4a269388100253dfc15daf4133fe01",
+  "split_sha256": "099812f1c3201a82b31e9ceaf3f4c4f7da3f2dddc321fd59fc147f0033fb0c33",
   "task": "reader",
   "training_initialization": "mapillary_pretraining",
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 2.956390380859375e-05,
+    "max_abs_error": 7.62939453125e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rtol": 0.0001
