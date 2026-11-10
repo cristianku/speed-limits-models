@@ -1,0 +1,142 @@
+{
+  "architecture": "context_full_mobilenet_v3_small",
+  "boxes": 5,
+  "checkpoint": "decider:2026-11-10_0037-decider/experiment-b/full",
+  "checkpoint_sha256": "f6b46e01c1d098e73256b0decad0b9cd0e21fb77ca012d671bfa1f81bee6a759",
+  "dataset_sha256": "05eebf81483f6b21536eb77c8570356a707121d126e0545bd44fd8211ca48279",
+  "inputs": {
+    "crops": {
+      "color": "RGB",
+      "crop_margin": 0.25,
+      "dtype": "float32",
+      "layout": "NCHW",
+      "normalization": {
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "shape": [
+        5,
+        3,
+        96,
+        96
+      ],
+      "source": "the box plus crop_margin of its width and height on each side, clipped to the frame, resized bilinear (PIL) to crop x crop"
+    },
+    "geometry": {
+      "dtype": "float32",
+      "features": [
+        "x1",
+        "y1",
+        "x2",
+        "y2",
+        "width",
+        "height",
+        "center_x",
+        "center_y",
+        "speed",
+        "speed_missing"
+      ],
+      "shape": [
+        5,
+        10
+      ],
+      "source": "corners, size and centre over the frame size; speed_mps / speed_scale_mps and 0, or 0 and 1 when the speed is missing",
+      "speed_scale_mps": 40.0
+    },
+    "roi_weights": {
+      "dtype": "float32",
+      "map": [
+        7,
+        12
+      ],
+      "sampling_ratio": 2,
+      "shape": [
+        5,
+        4,
+        84
+      ],
+      "size": 2,
+      "source": "torchvision roi_align (aligned, output size x size, sampling_ratio, spatial_scale 1/stride) of each box in scene pixels, as weights over the cells of the map: bin ph*size+pw, cell row*width+col",
+      "stride": 32
+    },
+    "scene": {
+      "color": "RGB",
+      "dtype": "float32",
+      "layout": "NCHW",
+      "normalization": {
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "shape": [
+        1,
+        3,
+        216,
+        384
+      ],
+      "source": "the whole frame resized bilinear (PIL)"
+    }
+  },
+  "onnx_sha256": "ab51c3c669ab776b639f31d138eb94b6461a35fcdd68e2f35dbed2f543f16362",
+  "outputs": {
+    "ownership": {
+      "classes": [
+        "own_road",
+        "other_road",
+        "unresolved"
+      ],
+      "decode": "probabilities; argmax, unresolved means it abstains; rows of the boxes given only",
+      "dtype": "float32",
+      "shape": [
+        5,
+        3
+      ]
+    }
+  },
+  "ownership_families": [
+    "cancellation",
+    "maximum_speed",
+    "variable_display",
+    "zone",
+    "road_marking"
+  ],
+  "plate_families": {
+    "maximum_speed_hours": "maximum_speed",
+    "maximum_speed_wet": "maximum_speed"
+  },
+  "schema_version": 1,
+  "split_sha256": "d9067e8e92ee54b61ad01e488a240bda7c4a269388100253dfc15daf4133fe01",
+  "target": "car",
+  "task": "decider",
+  "training_initialization": "start",
+  "variant": "full",
+  "verification": {
+    "atol": 0.0001,
+    "boxes_tried": [
+      1,
+      3,
+      5
+    ],
+    "enabled": true,
+    "max_abs_error": 1.1026859283447266e-06,
+    "passed": true,
+    "provider": "CPUExecutionProvider",
+    "reference": "PyTorch with torchvision roi_align",
+    "rtol": 0.001
+  }
+}

@@ -1,7 +1,7 @@
 {
   "architecture": "mobilenet_v3_small+gru",
-  "checkpoint": "brain:2026-11-08_1959-brain-s1/brain",
-  "checkpoint_sha256": "9266a2c982aeec946642e3a751a5ab1c080187c6bf7796ce4b25a539fb94c358",
+  "checkpoint": "brain:2026-11-10_0111-brain-s1/brain",
+  "checkpoint_sha256": "e414647d5f3a5249489e0b878986a90e6266d920f9b1024dc3a823ffeb32dcbc",
   "epoch": 39,
   "input": {
     "color": "RGB",
@@ -46,7 +46,7 @@
       "name": "extra",
       "shape": [
         1,
-        36
+        49
       ]
     },
     {
@@ -58,8 +58,8 @@
       ]
     }
   ],
-  "inputs_sha256": "c2303311c6b92f362273754c88fe87321ac0a3ac71967c259c9ad1161be1366d",
-  "onnx_sha256": "d060d3cd7090a5f1eab06aefba0dfbca7444c1bb36f74a9517d766841d64c298",
+  "inputs_sha256": "0d309056a32e48037e804302916398b71d4edd4fc765a62ea4906957d2d7e629",
+  "onnx_sha256": "9f280fd8da8e28583ed9b73227a29468180b22a84030099316cf778034dbbfa6",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -351,8 +351,11 @@
       "hour",
       "lead",
       "country",
+      "pedals",
+      "speed",
       "plate_wet",
-      "sign_distance"
+      "sign_distance",
+      "motion"
     ],
     "hours": false,
     "inputs": [
@@ -375,7 +378,7 @@
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 1.049041748046875e-05,
+    "max_abs_error": 5.9604644775390625e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rollout": {
@@ -384,7 +387,12 @@
       "other_speed": 0,
       "route": "0000012d--6552a45378",
       "said": [
+        4,
+        5,
+        6,
+        7,
         8,
+        9,
         10,
         11,
         12,
@@ -430,13 +438,14 @@
         52,
         53,
         54,
-        55,
+        57,
         58,
         59,
         60,
         61,
-        62,
+        63,
         64,
+        65,
         66,
         67,
         68,
@@ -480,14 +489,13 @@
         107,
         108,
         110,
-        113,
-        114,
-        115,
         116,
         117,
         118,
         119,
-        120
+        120,
+        121,
+        123
       ]
     },
     "rtol": 0.0001

@@ -1,8 +1,8 @@
 {
   "architecture": "mobilenet_v3_small",
-  "checkpoint": "classifier:2026-11-07_0939-classifier/classifier",
-  "checkpoint_sha256": "edef312370a31123749c2bcfb89f6133b7e847189c0c33bf8b905891a5e07f05",
-  "dataset_sha256": "d2c5053f203a444c9bb6ae16f2ea9c3e4b54bd93addffa794307ab1de768a213",
+  "checkpoint": "classifier:2026-11-10_0017-classifier/classifier",
+  "checkpoint_sha256": "1635bbb9963985ccfe18063aa64f88723a4871344226e5f93c0020a83b26761a",
+  "dataset_sha256": "05eebf81483f6b21536eb77c8570356a707121d126e0545bd44fd8211ca48279",
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -32,7 +32,7 @@
     ],
     "source": "reviewed_bbox_crop"
   },
-  "onnx_sha256": "572e4fa2878c1e5418a60d28d1690e5796de3fdfa8b41c10c626b3c2e115460c",
+  "onnx_sha256": "052ac10308a68aa070e5e8e10c680f81abe0633e3ff65c52f39f4267c11d383a",
   "output": {
     "classes": [
       "cancellation",
@@ -51,6 +51,8 @@
       "maximum_speed:90",
       "maximum_speed:unknown",
       "maximum_speed_hours:30",
+      "maximum_speed_wet:100",
+      "maximum_speed_wet:80",
       "not_a_sign",
       "other_sign",
       "other_sign:danger_other",
@@ -65,6 +67,7 @@
       "other_sign:motorway_direction",
       "other_sign:motorway_end",
       "other_sign:no_entry",
+      "other_sign:no_overtaking",
       "other_sign:other",
       "other_sign:pedestrian_crossing",
       "other_sign:priority_to_right",
@@ -74,6 +77,7 @@
       "road_marking:30",
       "unreadable",
       "variable_display:100",
+      "variable_display:120",
       "variable_display:50",
       "variable_display:60",
       "variable_display:80",
@@ -87,18 +91,18 @@
     "number_semantics": "written_sign_value",
     "shape": [
       1,
-      45
+      49
     ],
     "unit_source": "runtime_country"
   },
   "schema_version": 1,
-  "split_sha256": "9b8d192bb1265791153392bc7bba2633080ae37daee40a0c6314907070652e7f",
+  "split_sha256": "d9067e8e92ee54b61ad01e488a240bda7c4a269388100253dfc15daf4133fe01",
   "task": "reader",
-  "training_initialization": "checkpoint",
+  "training_initialization": "mapillary_pretraining",
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 2.574920654296875e-05,
+    "max_abs_error": 2.956390380859375e-05,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rtol": 0.0001
