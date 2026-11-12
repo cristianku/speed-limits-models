@@ -133,9 +133,9 @@
       5
     ],
     "enabled": true,
-    "max_abs_error": 4.172325134277344e-07,
+    "max_abs_error": 5.960464477539062e-07,
     "passed": true,
-    "provider": "CPUExecutionProvider",
+    "provider": "CUDAExecutionProvider",
     "reference": "PyTorch with torchvision roi_align",
     "rtol": 0.001
   }

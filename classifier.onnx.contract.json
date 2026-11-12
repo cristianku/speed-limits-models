@@ -109,7 +109,7 @@
     "enabled": true,
     "max_abs_error": 9.5367431640625e-06,
     "passed": true,
-    "provider": "CPUExecutionProvider",
+    "provider": "CUDAExecutionProvider",
     "rtol": 0.0001
   }
 }

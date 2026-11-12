@@ -59,7 +59,7 @@
     }
   ],
   "inputs_sha256": "0d309056a32e48037e804302916398b71d4edd4fc765a62ea4906957d2d7e629",
-  "onnx_sha256": "d54090e1381437c94e6ee3af56df5abc8bd3589568c989192d5179ebbfb8d801",
+  "onnx_sha256": "12741de493e35c368180cee854d2bffac85a8d672f100ff41f4559ca373c1c94",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -371,9 +371,9 @@
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 1.049041748046875e-05,
+    "max_abs_error": 8.58306884765625e-06,
     "passed": true,
-    "provider": "CPUExecutionProvider",
+    "provider": "CUDAExecutionProvider",
     "rollout": {
       "frames": 11040,
       "other_ahead": 0,
@@ -491,7 +491,7 @@
       ],
       "tied_ahead": 0,
       "tied_speed": 1,
-      "widest_gap": 3.814697265625e-06,
+      "widest_gap": 2.86102294921875e-06,
       "widest_gap_ahead": 0.0
     },
     "rtol": 0.0001

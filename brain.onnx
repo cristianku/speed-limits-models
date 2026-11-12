@@ -8,7 +8,7 @@ model.meansubnode_sub"SubJV
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.sub.Tensor']Jç
 pkg.torch.onnx.fx_nodes%sub : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%image, %b_model_mean), kwargs = {})J)
 pkg.torch.onnx.name_scopes['', 'sub']J¥
-pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
 ÿ
 sub
@@ -17,7 +17,7 @@ model.meansubnode_sub"SubJV
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.div.Tensor']Jä
 pkg.torch.onnx.fx_nodep%div : [num_users=1] = call_function[target=torch.ops.aten.div.Tensor](args = (%sub, %b_model_std), kwargs = {})J)
 pkg.torch.onnx.name_scopes['', 'div']J¥
-pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
 Í
 div
@@ -34,7 +34,7 @@ model.meansubnode_sub"SubJV
 pkg.torch.onnx.class_hierarchyÎ['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J—
 pkg.torch.onnx.fx_node∂%_native_batch_norm_legit_no_training : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d, %p_model_backbone_0_1_weight, %p_model_backbone_0_1_bias, %b_model_backbone_0_1_running_mean, %b_model_backbone_0_1_running_var, 0.01, 0.001), kwargs = {})JÜ
 pkg.torch.onnx.name_scopesh['', 'model.backbone', 'model.backbone.0', 'model.backbone.0.1', '_native_batch_norm_legit_no_training']JÑ
-pkg.torch.onnx.stack_traceÂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -48,7 +48,7 @@ model.meansubnode_sub"SubJV
 pkg.torch.onnx.class_hierarchyœ['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jé
 pkg.torch.onnx.fx_nodet%hardswish : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem,), kwargs = {})Jk
 pkg.torch.onnx.name_scopesM['', 'model.backbone', 'model.backbone.0', 'model.backbone.0.2', 'hardswish']Jò
-pkg.torch.onnx.stack_trace˘File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace˘File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -71,7 +71,7 @@ model.meansubnode_sub"SubJV
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_1 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_1, %p_model_backbone_1_block_0_1_weight, %p_model_backbone_1_block_0_1_bias, %b_model_backbone_1_block_0_1_running_mean, %b_model_backbone_1_block_0_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.0', 'model.backbone.1.block.0.1', '_native_batch_norm_legit_no_training_1']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -89,7 +89,7 @@ model.meansubnode_sub"SubJV
 pkg.torch.onnx.class_hierarchy°['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÜ
 pkg.torch.onnx.fx_nodel%relu : [num_users=2] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_3,), kwargs = {})J•
 pkg.torch.onnx.name_scopesÜ['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.0', 'model.backbone.1.block.0.2', 'relu']J⁄
-pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -111,7 +111,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jå
 pkg.torch.onnx.fx_noder%mean : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%relu, [-1, -2], True), kwargs = {})J´
 pkg.torch.onnx.name_scopeså['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.1', 'model.backbone.1.block.1.avgpool', 'mean']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -137,7 +137,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J’
 pkg.torch.onnx.fx_node∫%conv2d_2 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean, %p_model_backbone_1_block_1_fc1_weight, %p_model_backbone_1_block_1_fc1_bias), kwargs = {})J´
 pkg.torch.onnx.name_scopeså['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.1', 'model.backbone.1.block.1.fc1', 'conv2d_2']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -155,7 +155,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
 pkg.torch.onnx.fx_nodem%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_2,), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.1', 'model.backbone.1.block.1.activation', 'relu_1']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -181,7 +181,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J◊
 pkg.torch.onnx.fx_nodeº%conv2d_3 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_1, %p_model_backbone_1_block_1_fc2_weight, %p_model_backbone_1_block_1_fc2_bias), kwargs = {})J´
 pkg.torch.onnx.name_scopeså['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.1', 'model.backbone.1.block.1.fc2', 'conv2d_3']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -201,7 +201,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jì
 pkg.torch.onnx.fx_nodey%hardsigmoid : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_3,), kwargs = {})Jª
 pkg.torch.onnx.name_scopesú['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.1', 'model.backbone.1.block.1.scale_activation', 'hardsigmoid']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -220,7 +220,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jã
 pkg.torch.onnx.fx_nodeq%mul : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid, %relu), kwargs = {})JÖ
 pkg.torch.onnx.name_scopesg['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.1', 'mul']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -245,7 +245,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_2 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_4, %p_model_backbone_1_block_2_1_weight, %p_model_backbone_1_block_2_1_bias, %b_model_backbone_1_block_2_1_running_mean, %b_model_backbone_1_block_2_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.1', 'model.backbone.1.block', 'model.backbone.1.block.2', 'model.backbone.1.block.2.1', '_native_batch_norm_legit_no_training_2']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -272,7 +272,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_3 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_5, %p_model_backbone_2_block_0_1_weight, %p_model_backbone_2_block_0_1_bias, %b_model_backbone_2_block_0_1_running_mean, %b_model_backbone_2_block_0_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.2', 'model.backbone.2.block', 'model.backbone.2.block.0', 'model.backbone.2.block.0.1', '_native_batch_norm_legit_no_training_3']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -290,7 +290,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy°['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_9,), kwargs = {})Jß
 pkg.torch.onnx.name_scopesà['', 'model.backbone', 'model.backbone.2', 'model.backbone.2.block', 'model.backbone.2.block.0', 'model.backbone.2.block.0.2', 'relu_2']J⁄
-pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -318,7 +318,7 @@ getitem_12node_Conv_597"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_4 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_6, %p_model_backbone_2_block_1_1_weight, %p_model_backbone_2_block_1_1_bias, %b_model_backbone_2_block_1_1_running_mean, %b_model_backbone_2_block_1_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.2', 'model.backbone.2.block', 'model.backbone.2.block.1', 'model.backbone.2.block.1.1', '_native_batch_norm_legit_no_training_4']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -337,7 +337,7 @@ getitem_12relu_3node_relu_3"ReluJì
 pkg.torch.onnx.class_hierarchy°['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_12,), kwargs = {})Jß
 pkg.torch.onnx.name_scopesà['', 'model.backbone', 'model.backbone.2', 'model.backbone.2.block', 'model.backbone.2.block.1', 'model.backbone.2.block.1.2', 'relu_3']J⁄
-pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -365,7 +365,7 @@ getitem_15node_Conv_599"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_5 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_7, %p_model_backbone_2_block_2_1_weight, %p_model_backbone_2_block_2_1_bias, %b_model_backbone_2_block_2_1_running_mean, %b_model_backbone_2_block_2_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.2', 'model.backbone.2.block', 'model.backbone.2.block.2', 'model.backbone.2.block.2.1', '_native_batch_norm_legit_no_training_5']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -394,7 +394,7 @@ getitem_18node_Conv_601"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_6 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_8, %p_model_backbone_3_block_0_1_weight, %p_model_backbone_3_block_0_1_bias, %b_model_backbone_3_block_0_1_running_mean, %b_model_backbone_3_block_0_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.3', 'model.backbone.3.block', 'model.backbone.3.block.0', 'model.backbone.3.block.0.1', '_native_batch_norm_legit_no_training_6']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -413,7 +413,7 @@ getitem_18relu_4node_relu_4"ReluJì
 pkg.torch.onnx.class_hierarchy°['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_4 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_18,), kwargs = {})Jß
 pkg.torch.onnx.name_scopesà['', 'model.backbone', 'model.backbone.3', 'model.backbone.3.block', 'model.backbone.3.block.0', 'model.backbone.3.block.0.2', 'relu_4']J⁄
-pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -441,7 +441,7 @@ getitem_21node_Conv_603"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jı
 pkg.torch.onnx.fx_node⁄%_native_batch_norm_legit_no_training_7 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_9, %p_model_backbone_3_block_1_1_weight, %p_model_backbone_3_block_1_1_bias, %b_model_backbone_3_block_1_1_running_mean, %b_model_backbone_3_block_1_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.3', 'model.backbone.3.block', 'model.backbone.3.block.1', 'model.backbone.3.block.1.1', '_native_batch_norm_legit_no_training_7']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -460,7 +460,7 @@ getitem_21relu_5node_relu_5"ReluJì
 pkg.torch.onnx.class_hierarchy°['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_5 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_21,), kwargs = {})Jß
 pkg.torch.onnx.name_scopesà['', 'model.backbone', 'model.backbone.3', 'model.backbone.3.block', 'model.backbone.3.block.1', 'model.backbone.3.block.1.2', 'relu_5']J⁄
-pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceªFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -488,7 +488,7 @@ getitem_24node_Conv_605"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jˆ
 pkg.torch.onnx.fx_node€%_native_batch_norm_legit_no_training_8 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_10, %p_model_backbone_3_block_2_1_weight, %p_model_backbone_3_block_2_1_bias, %b_model_backbone_3_block_2_1_running_mean, %b_model_backbone_3_block_2_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.3', 'model.backbone.3.block', 'model.backbone.3.block.2', 'model.backbone.3.block.2.1', '_native_batch_norm_legit_no_training_8']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -509,7 +509,7 @@ getitem_15addnode_add"AddJœ
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'aten.add.Tensor']Jê
 pkg.torch.onnx.fx_nodev%add : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_24, %getitem_15), kwargs = {})JO
 pkg.torch.onnx.name_scopes1['', 'model.backbone', 'model.backbone.3', 'add']JË
-pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -531,7 +531,7 @@ getitem_27node_Conv_607"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']Jˆ
 pkg.torch.onnx.fx_node€%_native_batch_norm_legit_no_training_9 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_11, %p_model_backbone_4_block_0_1_weight, %p_model_backbone_4_block_0_1_bias, %b_model_backbone_4_block_0_1_running_mean, %b_model_backbone_4_block_0_1_running_var, 0.01, 0.001), kwargs = {})J«
 pkg.torch.onnx.name_scopes®['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.0', 'model.backbone.4.block.0.1', '_native_batch_norm_legit_no_training_9']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -550,7 +550,7 @@ getitem_27hardswish_1n0_2"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_1 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_27,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.0', 'model.backbone.4.block.0.2', 'hardswish_1']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -578,7 +578,7 @@ getitem_30node_Conv_609"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_10 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_12, %p_model_backbone_4_block_1_1_weight, %p_model_backbone_4_block_1_1_bias, %b_model_backbone_4_block_1_1_running_mean, %b_model_backbone_4_block_1_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.1', 'model.backbone.4.block.1.1', '_native_batch_norm_legit_no_training_10']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -597,7 +597,7 @@ getitem_30hardswish_2n0_3"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_2 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_30,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.1', 'model.backbone.4.block.1.2', 'hardswish_2']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -619,7 +619,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jï
 pkg.torch.onnx.fx_node{%mean_1 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_2, [-1, -2], True), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.2', 'model.backbone.4.block.2.avgpool', 'mean_1']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -645,7 +645,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_13 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_1, %p_model_backbone_4_block_2_fc1_weight, %p_model_backbone_4_block_2_fc1_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.2', 'model.backbone.4.block.2.fc1', 'conv2d_13']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -663,7 +663,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_6 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_13,), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.2', 'model.backbone.4.block.2.activation', 'relu_6']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -689,7 +689,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_14 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_6, %p_model_backbone_4_block_2_fc2_weight, %p_model_backbone_4_block_2_fc2_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.2', 'model.backbone.4.block.2.fc2', 'conv2d_14']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -709,7 +709,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_1 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_14,), kwargs = {})JΩ
 pkg.torch.onnx.name_scopesû['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.2', 'model.backbone.4.block.2.scale_activation', 'hardsigmoid_1']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -729,7 +729,7 @@ node_mul_1"MulJ–
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jñ
 pkg.torch.onnx.fx_node|%mul_1 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_1, %hardswish_2), kwargs = {})Já
 pkg.torch.onnx.name_scopesi['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.2', 'mul_1']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -755,7 +755,7 @@ getitem_33node_Conv_611"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_11 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_15, %p_model_backbone_4_block_3_1_weight, %p_model_backbone_4_block_3_1_bias, %b_model_backbone_4_block_3_1_running_mean, %b_model_backbone_4_block_3_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.4', 'model.backbone.4.block', 'model.backbone.4.block.3', 'model.backbone.4.block.3.1', '_native_batch_norm_legit_no_training_11']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -784,7 +784,7 @@ getitem_36node_Conv_613"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_12 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_16, %p_model_backbone_5_block_0_1_weight, %p_model_backbone_5_block_0_1_bias, %b_model_backbone_5_block_0_1_running_mean, %b_model_backbone_5_block_0_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.0', 'model.backbone.5.block.0.1', '_native_batch_norm_legit_no_training_12']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -803,7 +803,7 @@ getitem_36hardswish_3n0_4"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_3 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_36,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.0', 'model.backbone.5.block.0.2', 'hardswish_3']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -831,7 +831,7 @@ getitem_39node_Conv_615"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_13 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_17, %p_model_backbone_5_block_1_1_weight, %p_model_backbone_5_block_1_1_bias, %b_model_backbone_5_block_1_1_running_mean, %b_model_backbone_5_block_1_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.1', 'model.backbone.5.block.1.1', '_native_batch_norm_legit_no_training_13']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -850,7 +850,7 @@ getitem_39hardswish_4n0_5"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_4 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_39,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.1', 'model.backbone.5.block.1.2', 'hardswish_4']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -872,7 +872,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jï
 pkg.torch.onnx.fx_node{%mean_2 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_4, [-1, -2], True), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.2', 'model.backbone.5.block.2.avgpool', 'mean_2']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -898,7 +898,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_18 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_2, %p_model_backbone_5_block_2_fc1_weight, %p_model_backbone_5_block_2_fc1_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.2', 'model.backbone.5.block.2.fc1', 'conv2d_18']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -916,7 +916,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_7 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_18,), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.2', 'model.backbone.5.block.2.activation', 'relu_7']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -942,7 +942,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_19 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_7, %p_model_backbone_5_block_2_fc2_weight, %p_model_backbone_5_block_2_fc2_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.2', 'model.backbone.5.block.2.fc2', 'conv2d_19']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -962,7 +962,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_2 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_19,), kwargs = {})JΩ
 pkg.torch.onnx.name_scopesû['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.2', 'model.backbone.5.block.2.scale_activation', 'hardsigmoid_2']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -982,7 +982,7 @@ node_mul_2"MulJ–
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jñ
 pkg.torch.onnx.fx_node|%mul_2 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_2, %hardswish_4), kwargs = {})Já
 pkg.torch.onnx.name_scopesi['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.2', 'mul_2']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1008,7 +1008,7 @@ getitem_42node_Conv_617"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_14 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_20, %p_model_backbone_5_block_3_1_weight, %p_model_backbone_5_block_3_1_bias, %b_model_backbone_5_block_3_1_running_mean, %b_model_backbone_5_block_3_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.5', 'model.backbone.5.block', 'model.backbone.5.block.3', 'model.backbone.5.block.3.1', '_native_batch_norm_legit_no_training_14']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1030,7 +1030,7 @@ node_add_1"AddJ—
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'aten.add.Tensor']Jí
 pkg.torch.onnx.fx_nodex%add_1 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_42, %getitem_33), kwargs = {})JQ
 pkg.torch.onnx.name_scopes3['', 'model.backbone', 'model.backbone.5', 'add_1']JË
-pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1052,7 +1052,7 @@ getitem_45node_Conv_619"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_15 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_21, %p_model_backbone_6_block_0_1_weight, %p_model_backbone_6_block_0_1_bias, %b_model_backbone_6_block_0_1_running_mean, %b_model_backbone_6_block_0_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.0', 'model.backbone.6.block.0.1', '_native_batch_norm_legit_no_training_15']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1071,7 +1071,7 @@ getitem_45hardswish_5n0_6"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_5 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_45,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.0', 'model.backbone.6.block.0.2', 'hardswish_5']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1099,7 +1099,7 @@ getitem_48node_Conv_621"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_16 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_22, %p_model_backbone_6_block_1_1_weight, %p_model_backbone_6_block_1_1_bias, %b_model_backbone_6_block_1_1_running_mean, %b_model_backbone_6_block_1_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.1', 'model.backbone.6.block.1.1', '_native_batch_norm_legit_no_training_16']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1118,7 +1118,7 @@ getitem_48hardswish_6n0_7"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_6 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_48,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.1', 'model.backbone.6.block.1.2', 'hardswish_6']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1140,7 +1140,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jï
 pkg.torch.onnx.fx_node{%mean_3 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_6, [-1, -2], True), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.2', 'model.backbone.6.block.2.avgpool', 'mean_3']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1166,7 +1166,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_23 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_3, %p_model_backbone_6_block_2_fc1_weight, %p_model_backbone_6_block_2_fc1_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.2', 'model.backbone.6.block.2.fc1', 'conv2d_23']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1184,7 +1184,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_8 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_23,), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.2', 'model.backbone.6.block.2.activation', 'relu_8']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1210,7 +1210,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_24 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_8, %p_model_backbone_6_block_2_fc2_weight, %p_model_backbone_6_block_2_fc2_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.2', 'model.backbone.6.block.2.fc2', 'conv2d_24']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1230,7 +1230,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_3 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_24,), kwargs = {})JΩ
 pkg.torch.onnx.name_scopesû['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.2', 'model.backbone.6.block.2.scale_activation', 'hardsigmoid_3']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1250,7 +1250,7 @@ node_mul_3"MulJ–
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jñ
 pkg.torch.onnx.fx_node|%mul_3 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_3, %hardswish_6), kwargs = {})Já
 pkg.torch.onnx.name_scopesi['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.2', 'mul_3']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1276,7 +1276,7 @@ getitem_51node_Conv_623"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_17 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_25, %p_model_backbone_6_block_3_1_weight, %p_model_backbone_6_block_3_1_bias, %b_model_backbone_6_block_3_1_running_mean, %b_model_backbone_6_block_3_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.6', 'model.backbone.6.block', 'model.backbone.6.block.3', 'model.backbone.6.block.3.1', '_native_batch_norm_legit_no_training_17']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1297,7 +1297,7 @@ node_add_2"AddJ—
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'aten.add.Tensor']Jç
 pkg.torch.onnx.fx_nodes%add_2 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_51, %add_1), kwargs = {})JQ
 pkg.torch.onnx.name_scopes3['', 'model.backbone', 'model.backbone.6', 'add_2']JË
-pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1319,7 +1319,7 @@ getitem_54node_Conv_625"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_18 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_26, %p_model_backbone_7_block_0_1_weight, %p_model_backbone_7_block_0_1_bias, %b_model_backbone_7_block_0_1_running_mean, %b_model_backbone_7_block_0_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.0', 'model.backbone.7.block.0.1', '_native_batch_norm_legit_no_training_18']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1338,7 +1338,7 @@ getitem_54hardswish_7n0_8"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_7 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_54,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.0', 'model.backbone.7.block.0.2', 'hardswish_7']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1366,7 +1366,7 @@ getitem_57node_Conv_627"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_19 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_27, %p_model_backbone_7_block_1_1_weight, %p_model_backbone_7_block_1_1_bias, %b_model_backbone_7_block_1_1_running_mean, %b_model_backbone_7_block_1_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.1', 'model.backbone.7.block.1.1', '_native_batch_norm_legit_no_training_19']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1385,7 +1385,7 @@ getitem_57hardswish_8n0_9"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_8 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_57,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.1', 'model.backbone.7.block.1.2', 'hardswish_8']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1407,7 +1407,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jï
 pkg.torch.onnx.fx_node{%mean_4 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_8, [-1, -2], True), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.2', 'model.backbone.7.block.2.avgpool', 'mean_4']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1433,7 +1433,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_28 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_4, %p_model_backbone_7_block_2_fc1_weight, %p_model_backbone_7_block_2_fc1_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.2', 'model.backbone.7.block.2.fc1', 'conv2d_28']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1451,7 +1451,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_9 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_28,), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.2', 'model.backbone.7.block.2.activation', 'relu_9']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1477,7 +1477,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_29 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_9, %p_model_backbone_7_block_2_fc2_weight, %p_model_backbone_7_block_2_fc2_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.2', 'model.backbone.7.block.2.fc2', 'conv2d_29']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1497,7 +1497,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_4 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_29,), kwargs = {})JΩ
 pkg.torch.onnx.name_scopesû['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.2', 'model.backbone.7.block.2.scale_activation', 'hardsigmoid_4']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1517,7 +1517,7 @@ node_mul_4"MulJ–
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jñ
 pkg.torch.onnx.fx_node|%mul_4 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_4, %hardswish_8), kwargs = {})Já
 pkg.torch.onnx.name_scopesi['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.2', 'mul_4']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1543,7 +1543,7 @@ getitem_60node_Conv_629"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_20 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_30, %p_model_backbone_7_block_3_1_weight, %p_model_backbone_7_block_3_1_bias, %b_model_backbone_7_block_3_1_running_mean, %b_model_backbone_7_block_3_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.7', 'model.backbone.7.block', 'model.backbone.7.block.3', 'model.backbone.7.block.3.1', '_native_batch_norm_legit_no_training_20']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1572,7 +1572,7 @@ getitem_63node_Conv_631"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_21 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_31, %p_model_backbone_8_block_0_1_weight, %p_model_backbone_8_block_0_1_bias, %b_model_backbone_8_block_0_1_running_mean, %b_model_backbone_8_block_0_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.0', 'model.backbone.8.block.0.1', '_native_batch_norm_legit_no_training_21']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1591,7 +1591,7 @@ getitem_63hardswish_9n0_10"	HardSwishJ¢
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jì
 pkg.torch.onnx.fx_nodey%hardswish_9 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_63,), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.0', 'model.backbone.8.block.0.2', 'hardswish_9']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1619,7 +1619,7 @@ getitem_66node_Conv_633"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_22 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_32, %p_model_backbone_8_block_1_1_weight, %p_model_backbone_8_block_1_1_bias, %b_model_backbone_8_block_1_1_running_mean, %b_model_backbone_8_block_1_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.1', 'model.backbone.8.block.1.1', '_native_batch_norm_legit_no_training_22']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1638,7 +1638,7 @@ getitem_66hardswish_10n0_11"	HardSwishJ£
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_10 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_66,), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.1', 'model.backbone.8.block.1.2', 'hardswish_10']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1660,7 +1660,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jñ
 pkg.torch.onnx.fx_node|%mean_5 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_10, [-1, -2], True), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.2', 'model.backbone.8.block.2.avgpool', 'mean_5']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1686,7 +1686,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_33 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_5, %p_model_backbone_8_block_2_fc1_weight, %p_model_backbone_8_block_2_fc1_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.2', 'model.backbone.8.block.2.fc1', 'conv2d_33']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1704,7 +1704,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_10 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_33,), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.2', 'model.backbone.8.block.2.activation', 'relu_10']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1730,7 +1730,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']JŸ
 pkg.torch.onnx.fx_nodeæ%conv2d_34 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_10, %p_model_backbone_8_block_2_fc2_weight, %p_model_backbone_8_block_2_fc2_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.2', 'model.backbone.8.block.2.fc2', 'conv2d_34']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1750,7 +1750,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_5 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_34,), kwargs = {})JΩ
 pkg.torch.onnx.name_scopesû['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.2', 'model.backbone.8.block.2.scale_activation', 'hardsigmoid_5']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1770,7 +1770,7 @@ node_mul_5"MulJ–
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jó
 pkg.torch.onnx.fx_node}%mul_5 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_5, %hardswish_10), kwargs = {})Já
 pkg.torch.onnx.name_scopesi['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.2', 'mul_5']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1796,7 +1796,7 @@ getitem_69node_Conv_635"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_23 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_35, %p_model_backbone_8_block_3_1_weight, %p_model_backbone_8_block_3_1_bias, %b_model_backbone_8_block_3_1_running_mean, %b_model_backbone_8_block_3_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.8', 'model.backbone.8.block', 'model.backbone.8.block.3', 'model.backbone.8.block.3.1', '_native_batch_norm_legit_no_training_23']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1818,7 +1818,7 @@ node_add_3"AddJ—
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'aten.add.Tensor']Jí
 pkg.torch.onnx.fx_nodex%add_3 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_69, %getitem_60), kwargs = {})JQ
 pkg.torch.onnx.name_scopes3['', 'model.backbone', 'model.backbone.8', 'add_3']JË
-pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1840,7 +1840,7 @@ getitem_72node_Conv_637"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_24 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_36, %p_model_backbone_9_block_0_1_weight, %p_model_backbone_9_block_0_1_bias, %b_model_backbone_9_block_0_1_running_mean, %b_model_backbone_9_block_0_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.0', 'model.backbone.9.block.0.1', '_native_batch_norm_legit_no_training_24']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1859,7 +1859,7 @@ getitem_72hardswish_11n0_12"	HardSwishJ£
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_11 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_72,), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.0', 'model.backbone.9.block.0.2', 'hardswish_11']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1887,7 +1887,7 @@ getitem_75node_Conv_639"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_25 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_37, %p_model_backbone_9_block_1_1_weight, %p_model_backbone_9_block_1_1_bias, %b_model_backbone_9_block_1_1_running_mean, %b_model_backbone_9_block_1_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.1', 'model.backbone.9.block.1.1', '_native_batch_norm_legit_no_training_25']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1906,7 +1906,7 @@ getitem_75hardswish_12n0_13"	HardSwishJ£
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_12 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_75,), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.1', 'model.backbone.9.block.1.2', 'hardswish_12']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1928,7 +1928,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jñ
 pkg.torch.onnx.fx_node|%mean_6 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_12, [-1, -2], True), kwargs = {})J≠
 pkg.torch.onnx.name_scopesé['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.2', 'model.backbone.9.block.2.avgpool', 'mean_6']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1954,7 +1954,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%conv2d_38 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_6, %p_model_backbone_9_block_2_fc1_weight, %p_model_backbone_9_block_2_fc1_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.2', 'model.backbone.9.block.2.fc1', 'conv2d_38']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1972,7 +1972,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_11 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_38,), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.2', 'model.backbone.9.block.2.activation', 'relu_11']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -1998,7 +1998,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']JŸ
 pkg.torch.onnx.fx_nodeæ%conv2d_39 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_11, %p_model_backbone_9_block_2_fc2_weight, %p_model_backbone_9_block_2_fc2_bias), kwargs = {})J¨
 pkg.torch.onnx.name_scopesç['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.2', 'model.backbone.9.block.2.fc2', 'conv2d_39']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2018,7 +2018,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_6 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_39,), kwargs = {})JΩ
 pkg.torch.onnx.name_scopesû['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.2', 'model.backbone.9.block.2.scale_activation', 'hardsigmoid_6']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2038,7 +2038,7 @@ node_mul_6"MulJ–
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jó
 pkg.torch.onnx.fx_node}%mul_6 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_6, %hardswish_12), kwargs = {})Já
 pkg.torch.onnx.name_scopesi['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.2', 'mul_6']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2064,7 +2064,7 @@ getitem_78node_Conv_641"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˜
 pkg.torch.onnx.fx_node‹%_native_batch_norm_legit_no_training_26 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_40, %p_model_backbone_9_block_3_1_weight, %p_model_backbone_9_block_3_1_bias, %b_model_backbone_9_block_3_1_running_mean, %b_model_backbone_9_block_3_1_running_var, 0.01, 0.001), kwargs = {})J»
 pkg.torch.onnx.name_scopes©['', 'model.backbone', 'model.backbone.9', 'model.backbone.9.block', 'model.backbone.9.block.3', 'model.backbone.9.block.3.1', '_native_batch_norm_legit_no_training_26']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2093,7 +2093,7 @@ getitem_81node_Conv_643"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˚
 pkg.torch.onnx.fx_node‡%_native_batch_norm_legit_no_training_27 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_41, %p_model_backbone_10_block_0_1_weight, %p_model_backbone_10_block_0_1_bias, %b_model_backbone_10_block_0_1_running_mean, %b_model_backbone_10_block_0_1_running_var, 0.01, 0.001), kwargs = {})JÃ
 pkg.torch.onnx.name_scopes≠['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.0', 'model.backbone.10.block.0.1', '_native_batch_norm_legit_no_training_27']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2112,7 +2112,7 @@ getitem_81hardswish_13n0_14"	HardSwishJß
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_13 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_81,), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.0', 'model.backbone.10.block.0.2', 'hardswish_13']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2140,7 +2140,7 @@ getitem_84node_Conv_645"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˚
 pkg.torch.onnx.fx_node‡%_native_batch_norm_legit_no_training_28 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_42, %p_model_backbone_10_block_1_1_weight, %p_model_backbone_10_block_1_1_bias, %b_model_backbone_10_block_1_1_running_mean, %b_model_backbone_10_block_1_1_running_var, 0.01, 0.001), kwargs = {})JÃ
 pkg.torch.onnx.name_scopes≠['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.1', 'model.backbone.10.block.1.1', '_native_batch_norm_legit_no_training_28']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2159,7 +2159,7 @@ getitem_84hardswish_14n0_15"	HardSwishJß
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_14 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_84,), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.1', 'model.backbone.10.block.1.2', 'hardswish_14']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2181,7 +2181,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jñ
 pkg.torch.onnx.fx_node|%mean_7 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_14, [-1, -2], True), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.2', 'model.backbone.10.block.2.avgpool', 'mean_7']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2207,7 +2207,7 @@ $model.backbone.10.block.2.fc1.weight
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J⁄
 pkg.torch.onnx.fx_nodeø%conv2d_43 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_7, %p_model_backbone_10_block_2_fc1_weight, %p_model_backbone_10_block_2_fc1_bias), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.2', 'model.backbone.10.block.2.fc1', 'conv2d_43']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2225,7 +2225,7 @@ $model.backbone.10.block.2.fc1.weight
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_12 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_43,), kwargs = {})Jµ
 pkg.torch.onnx.name_scopesñ['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.2', 'model.backbone.10.block.2.activation', 'relu_12']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2251,7 +2251,7 @@ $model.backbone.10.block.2.fc2.weight
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J€
 pkg.torch.onnx.fx_node¿%conv2d_44 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_12, %p_model_backbone_10_block_2_fc2_weight, %p_model_backbone_10_block_2_fc2_bias), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.2', 'model.backbone.10.block.2.fc2', 'conv2d_44']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2271,7 +2271,7 @@ $model.backbone.10.block.2.fc2.weight
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_7 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_44,), kwargs = {})J¡
 pkg.torch.onnx.name_scopes¢['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.2', 'model.backbone.10.block.2.scale_activation', 'hardsigmoid_7']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2291,7 +2291,7 @@ node_mul_7"MulJ”
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jó
 pkg.torch.onnx.fx_node}%mul_7 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_7, %hardswish_14), kwargs = {})Jä
 pkg.torch.onnx.name_scopesl['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.2', 'mul_7']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2317,7 +2317,7 @@ getitem_87node_Conv_647"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˚
 pkg.torch.onnx.fx_node‡%_native_batch_norm_legit_no_training_29 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_45, %p_model_backbone_10_block_3_1_weight, %p_model_backbone_10_block_3_1_bias, %b_model_backbone_10_block_3_1_running_mean, %b_model_backbone_10_block_3_1_running_var, 0.01, 0.001), kwargs = {})JÃ
 pkg.torch.onnx.name_scopes≠['', 'model.backbone', 'model.backbone.10', 'model.backbone.10.block', 'model.backbone.10.block.3', 'model.backbone.10.block.3.1', '_native_batch_norm_legit_no_training_29']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2339,7 +2339,7 @@ node_add_4"AddJ“
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'aten.add.Tensor']Jí
 pkg.torch.onnx.fx_nodex%add_4 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_87, %getitem_78), kwargs = {})JR
 pkg.torch.onnx.name_scopes4['', 'model.backbone', 'model.backbone.10', 'add_4']JË
-pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2361,7 +2361,7 @@ getitem_90node_Conv_649"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˚
 pkg.torch.onnx.fx_node‡%_native_batch_norm_legit_no_training_30 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_46, %p_model_backbone_11_block_0_1_weight, %p_model_backbone_11_block_0_1_bias, %b_model_backbone_11_block_0_1_running_mean, %b_model_backbone_11_block_0_1_running_var, 0.01, 0.001), kwargs = {})JÃ
 pkg.torch.onnx.name_scopes≠['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.0', 'model.backbone.11.block.0.1', '_native_batch_norm_legit_no_training_30']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2380,7 +2380,7 @@ getitem_90hardswish_15n0_16"	HardSwishJß
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_15 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_90,), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.0', 'model.backbone.11.block.0.2', 'hardswish_15']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2408,7 +2408,7 @@ getitem_93node_Conv_651"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˚
 pkg.torch.onnx.fx_node‡%_native_batch_norm_legit_no_training_31 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_47, %p_model_backbone_11_block_1_1_weight, %p_model_backbone_11_block_1_1_bias, %b_model_backbone_11_block_1_1_running_mean, %b_model_backbone_11_block_1_1_running_var, 0.01, 0.001), kwargs = {})JÃ
 pkg.torch.onnx.name_scopes≠['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.1', 'model.backbone.11.block.1.1', '_native_batch_norm_legit_no_training_31']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2427,7 +2427,7 @@ getitem_93hardswish_16n0_17"	HardSwishJß
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_16 : [num_users=2] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_93,), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.1', 'model.backbone.11.block.1.2', 'hardswish_16']J◊
-pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∏File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2449,7 +2449,7 @@ ReduceMean*
 pkg.torch.onnx.class_hierarchy§['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jñ
 pkg.torch.onnx.fx_node|%mean_8 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%hardswish_16, [-1, -2], True), kwargs = {})J±
 pkg.torch.onnx.name_scopesí['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.2', 'model.backbone.11.block.2.avgpool', 'mean_8']J‚
-pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace√File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2475,7 +2475,7 @@ $model.backbone.11.block.2.fc1.weight
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J⁄
 pkg.torch.onnx.fx_nodeø%conv2d_48 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_8, %p_model_backbone_11_block_2_fc1_weight, %p_model_backbone_11_block_2_fc1_bias), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.2', 'model.backbone.11.block.2.fc1', 'conv2d_48']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2493,7 +2493,7 @@ $model.backbone.11.block.2.fc1.weight
 pkg.torch.onnx.class_hierarchyû['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_13 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_48,), kwargs = {})Jµ
 pkg.torch.onnx.name_scopesñ['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.2', 'model.backbone.11.block.2.activation', 'relu_13']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2519,7 +2519,7 @@ $model.backbone.11.block.2.fc2.weight
 pkg.torch.onnx.class_hierarchyú['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J€
 pkg.torch.onnx.fx_node¿%conv2d_49 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_13, %p_model_backbone_11_block_2_fc2_weight, %p_model_backbone_11_block_2_fc2_bias), kwargs = {})J∞
 pkg.torch.onnx.name_scopesë['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.2', 'model.backbone.11.block.2.fc2', 'conv2d_49']J·
-pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace¬File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2539,7 +2539,7 @@ $model.backbone.11.block.2.fc2.weight
 pkg.torch.onnx.class_hierarchy¨['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'torch.nn.modules.activation.Hardsigmoid', 'aten.hardsigmoid.default']Jñ
 pkg.torch.onnx.fx_node|%hardsigmoid_8 : [num_users=1] = call_function[target=torch.ops.aten.hardsigmoid.default](args = (%conv2d_49,), kwargs = {})J¡
 pkg.torch.onnx.name_scopes¢['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.2', 'model.backbone.11.block.2.scale_activation', 'hardsigmoid_8']Jÿ
-pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceπFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2559,7 +2559,7 @@ node_mul_8"MulJ”
 pkg.torch.onnx.class_hierarchy¯['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.SqueezeExcitation', 'aten.mul.Tensor']Jó
 pkg.torch.onnx.fx_node}%mul_8 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%hardsigmoid_8, %hardswish_16), kwargs = {})Jä
 pkg.torch.onnx.name_scopesl['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.2', 'mul_8']J¢
-pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÉFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2585,7 +2585,7 @@ getitem_96node_Conv_653"Conv*
 pkg.torch.onnx.class_hierarchy«['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J˚
 pkg.torch.onnx.fx_node‡%_native_batch_norm_legit_no_training_32 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_50, %p_model_backbone_11_block_3_1_weight, %p_model_backbone_11_block_3_1_bias, %b_model_backbone_11_block_3_1_running_mean, %b_model_backbone_11_block_3_1_running_var, 0.01, 0.001), kwargs = {})JÃ
 pkg.torch.onnx.name_scopes≠['', 'model.backbone', 'model.backbone.11', 'model.backbone.11.block', 'model.backbone.11.block.3', 'model.backbone.11.block.3.1', '_native_batch_norm_legit_no_training_32']J√
-pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace§File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2606,7 +2606,7 @@ node_add_5"AddJ“
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.models.mobilenetv3.InvertedResidual', 'aten.add.Tensor']Jç
 pkg.torch.onnx.fx_nodes%add_5 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_96, %add_4), kwargs = {})JR
 pkg.torch.onnx.name_scopes4['', 'model.backbone', 'model.backbone.11', 'add_5']JË
-pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace…File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2628,7 +2628,7 @@ getitem_99node_Conv_655"Conv*
 pkg.torch.onnx.class_hierarchyÎ['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J€
 pkg.torch.onnx.fx_node¿%_native_batch_norm_legit_no_training_33 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_51, %p_model_backbone_12_1_weight, %p_model_backbone_12_1_bias, %b_model_backbone_12_1_running_mean, %b_model_backbone_12_1_running_var, 0.01, 0.001), kwargs = {})Jã
 pkg.torch.onnx.name_scopesm['', 'model.backbone', 'model.backbone.12', 'model.backbone.12.1', '_native_batch_norm_legit_no_training_33']JÑ
-pkg.torch.onnx.stack_traceÂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceÂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2643,7 +2643,7 @@ getitem_99hardswish_17n0_18"	HardSwishJï
 pkg.torch.onnx.class_hierarchyœ['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torchvision.ops.misc.Conv2dNormActivation', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_17 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%getitem_99,), kwargs = {})Jp
 pkg.torch.onnx.name_scopesR['', 'model.backbone', 'model.backbone.12', 'model.backbone.12.2', 'hardswish_17']Jò
-pkg.torch.onnx.stack_trace˘File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace˘File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2665,7 +2665,7 @@ getitem_99hardswish_17n0_18"	HardSwishJï
 pkg.torch.onnx.class_hierarchym['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¿
 pkg.torch.onnx.fx_node•%conv2d_52 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardswish_17, %p_model_squeeze_weight, %p_model_squeeze_bias), kwargs = {})J@
 pkg.torch.onnx.name_scopes"['', 'model.squeeze', 'conv2d_52']JÌ
-pkg.torch.onnx.stack_traceŒFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceŒFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/conv.py", line 565, in forward
     return self._conv_forward(input, self.weight, self.bias)
@@ -2677,7 +2677,7 @@ getitem_99hardswish_17n0_18"	HardSwishJï
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.view.default']Jê
 pkg.torch.onnx.fx_nodev%view : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%conv2d_52, [1, 1280]), kwargs = {})J*
 pkg.torch.onnx.name_scopes['', 'view']J¥
-pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
 £
 
@@ -2692,7 +2692,7 @@ getitem_99hardswish_17n0_18"	HardSwishJï
 pkg.torch.onnx.class_hierarchyò['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jπ
 pkg.torch.onnx.fx_nodeû%linear : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%view, %p_model_project_0_weight, %p_model_project_0_bias), kwargs = {})JP
 pkg.torch.onnx.name_scopes2['', 'model.project', 'model.project.0', 'linear']JÄ
-pkg.torch.onnx.stack_trace·File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_trace·File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2712,7 +2712,7 @@ stash_type†*
 pkg.torch.onnx.class_hierarchy¶['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.normalization.LayerNorm', 'aten.layer_norm.default']Jÿ
 pkg.torch.onnx.fx_nodeΩ%layer_norm : [num_users=1] = call_function[target=torch.ops.aten.layer_norm.default](args = (%linear, [128], %p_model_project_1_weight, %p_model_project_1_bias, 1e-05, False), kwargs = {})JT
 pkg.torch.onnx.name_scopes6['', 'model.project', 'model.project.1', 'layer_norm']JÌ
-pkg.torch.onnx.stack_traceŒFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceŒFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2725,7 +2725,7 @@ layer_normhardswish_18n0_19"	HardSwishJ”
 pkg.torch.onnx.class_hierarchy¢['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Hardswish', 'aten.hardswish.default']Jî
 pkg.torch.onnx.fx_nodez%hardswish_18 : [num_users=1] = call_function[target=torch.ops.aten.hardswish.default](args = (%layer_norm,), kwargs = {})JV
 pkg.torch.onnx.name_scopes8['', 'model.project', 'model.project.2', 'hardswish_18']J˝
-pkg.torch.onnx.stack_traceﬁFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceﬁFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -2739,7 +2739,7 @@ layer_normhardswish_18n0_19"	HardSwishJ”
 pkg.torch.onnx.class_hierarchyJ['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.cat.default']Jî
 pkg.torch.onnx.fx_nodez%cat : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%hardswish_18, %extra], -1), kwargs = {})J)
 pkg.torch.onnx.name_scopes['', 'cat']J¥
-pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 71, in forward
+pkg.torch.onnx.stack_traceïFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
     x = torch.cat([self.model.encode(image), extra], dim=-1)
 ˇ
 cat
@@ -2753,7 +2753,7 @@ layer_normhardswish_18n0_19"	HardSwishJ”
 pkg.torch.onnx.class_hierarchyM['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.linear.default']J∫
 pkg.torch.onnx.fx_nodeü%linear_1 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%cat, %p_model_gru_weight_ih_l0, %p_model_gru_bias_ih_l0), kwargs = {})J.
 pkg.torch.onnx.name_scopes['', 'linear_1']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 Ö
 hidden
@@ -2767,7 +2767,7 @@ layer_normhardswish_18n0_19"	HardSwishJ”
 pkg.torch.onnx.class_hierarchyM['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.linear.default']JΩ
 pkg.torch.onnx.fx_node¢%linear_2 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%hidden, %p_model_gru_weight_hh_l0, %p_model_gru_bias_hh_l0), kwargs = {})J.
 pkg.torch.onnx.name_scopes['', 'linear_2']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 o
 linear_1split_split_0split_split_1split_split_2node_Split_563"Split*
@@ -2785,7 +2785,7 @@ node_add_6"AddJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jî
 pkg.torch.onnx.fx_nodez%add_6 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_102, %getitem_105), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'add_6']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 „
 add_6sigmoidnode_sigmoid"SigmoidJ_
@@ -2793,7 +2793,7 @@ node_add_6"AddJX
 pkg.torch.onnx.class_hierarchyN['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.sigmoid.default']Jà
 pkg.torch.onnx.fx_noden%sigmoid : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%add_6,), kwargs = {})J-
 pkg.torch.onnx.name_scopes['', 'sigmoid']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 Ú
 split_split_1
@@ -2803,7 +2803,7 @@ node_add_7"AddJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jî
 pkg.torch.onnx.fx_nodez%add_7 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_103, %getitem_106), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'add_7']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 Ì
 add_7	sigmoid_1node_sigmoid_1"SigmoidJa
@@ -2811,7 +2811,7 @@ node_add_7"AddJX
 pkg.torch.onnx.class_hierarchyN['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.sigmoid.default']Jä
 pkg.torch.onnx.fx_nodep%sigmoid_1 : [num_users=2] = call_function[target=torch.ops.aten.sigmoid.default](args = (%add_7,), kwargs = {})J/
 pkg.torch.onnx.name_scopes['', 'sigmoid_1']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 Ë
 sigmoid
@@ -2821,7 +2821,7 @@ node_mul_9"MulJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jê
 pkg.torch.onnx.fx_nodev%mul_9 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%sigmoid, %getitem_107), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'mul_9']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 ‚
 split_split_2
@@ -2831,7 +2831,7 @@ node_add_8"AddJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jé
 pkg.torch.onnx.fx_nodet%add_8 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%getitem_104, %mul_9), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'add_8']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 »
 add_8tanh	node_tanh"TanhJY
@@ -2839,7 +2839,7 @@ node_add_8"AddJX
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.tanh.default']JÇ
 pkg.torch.onnx.fx_nodeh%tanh : [num_users=1] = call_function[target=torch.ops.aten.tanh.default](args = (%add_8,), kwargs = {})J*
 pkg.torch.onnx.name_scopes['', 'tanh']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 ˝
 scalar_tensor_default
@@ -2849,7 +2849,7 @@ node_sub_1"SubJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.sub.Tensor']Jù
 pkg.torch.onnx.fx_nodeÇ%sub_1 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%scalar_tensor_default, %sigmoid_1), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'sub_1']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 ◊
 sub_1
@@ -2858,7 +2858,7 @@ node_sub_1"SubJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jà
 pkg.torch.onnx.fx_noden%mul_10 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%sub_1, %tanh), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_10']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 „
 	sigmoid_1
@@ -2867,7 +2867,7 @@ node_sub_1"SubJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jé
 pkg.torch.onnx.fx_nodet%mul_11 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%sigmoid_1, %hidden), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_11']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 ›
 mul_10
@@ -2878,7 +2878,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jä
 pkg.torch.onnx.fx_nodep%add_9 : [num_users=7] = call_function[target=torch.ops.aten.add.Tensor](args = (%mul_10, %mul_11), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'add_9']J¨
-pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 72, in forward
+pkg.torch.onnx.stack_traceçFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
     hidden_out = gru_step(self.model.gru, x, hidden)
 ˇ
 extra
@@ -2890,7 +2890,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.slice.Tensor']Jé
 pkg.torch.onnx.fx_nodet%slice_1 : [num_users=3] = call_function[target=torch.ops.aten.slice.Tensor](args = (%extra, 1, 0, 11), kwargs = {})J-
 pkg.torch.onnx.name_scopes['', 'slice_1']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 Ç
 slice_1
@@ -2902,7 +2902,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.slice.Tensor']Jè
 pkg.torch.onnx.fx_nodeu%slice_2 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%slice_1, 1, 1, 2), kwargs = {})J-
 pkg.torch.onnx.name_scopes['', 'slice_2']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 Ë
 slice_2
@@ -2912,7 +2912,7 @@ node_add_9"AddJX
 pkg.torch.onnx.fx_node~%gt : [num_users=1] = call_function[target=torch.ops.aten.gt.Tensor](args = (%slice_2, %scalar_tensor_default_1), kwargs = {})J(
 pkg.torch.onnx.name_scopes
 ['', 'gt']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 Ç
 slice_1
@@ -2924,7 +2924,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.slice.Tensor']Jè
 pkg.torch.onnx.fx_nodeu%slice_3 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%slice_1, 1, 6, 7), kwargs = {})J-
 pkg.torch.onnx.name_scopes['', 'slice_3']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 Ê
 slice_3
@@ -2934,7 +2934,7 @@ node_add_9"AddJX
 pkg.torch.onnx.fx_node~%eq : [num_users=1] = call_function[target=torch.ops.aten.eq.Tensor](args = (%slice_3, %scalar_tensor_default_2), kwargs = {})J(
 pkg.torch.onnx.name_scopes
 ['', 'eq']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 ¯
 gt
@@ -2943,7 +2943,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyQ['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.bitwise_and.Tensor']Jê
 pkg.torch.onnx.fx_nodev%bitwise_and : [num_users=1] = call_function[target=torch.ops.aten.bitwise_and.Tensor](args = (%gt, %eq), kwargs = {})J1
 pkg.torch.onnx.name_scopes['', 'bitwise_and']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 Ç
 slice_1
@@ -2955,7 +2955,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.slice.Tensor']Jè
 pkg.torch.onnx.fx_nodeu%slice_4 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%slice_1, 1, 0, 1), kwargs = {})J-
 pkg.torch.onnx.name_scopes['', 'slice_4']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 ÿ
 slice_4
@@ -2964,7 +2964,7 @@ node_add_9"AddJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jä
 pkg.torch.onnx.fx_nodep%mul_12 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%slice_4, 130.0), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_12']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 Ê
 mul_12
@@ -2974,7 +2974,7 @@ node_sub_2"SubJX
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.sub.Tensor']Jï
 pkg.torch.onnx.fx_node{%sub_2 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%mul_12, %b_model_class_kph), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'sub_2']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 √
 sub_2abs_1
@@ -2983,7 +2983,7 @@ node_abs_1"AbsJY
 pkg.torch.onnx.class_hierarchyJ['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.abs.default']JÇ
 pkg.torch.onnx.fx_nodeh%abs_1 : [num_users=1] = call_function[target=torch.ops.aten.abs.default](args = (%sub_2,), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'abs_1']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 º
 abs_1
@@ -2993,7 +2993,7 @@ node_abs_1"AbsJY
 pkg.torch.onnx.fx_nodeg%lt : [num_users=1] = call_function[target=torch.ops.aten.lt.Scalar](args = (%abs_1, 0.5), kwargs = {})J(
 pkg.torch.onnx.name_scopes
 ['', 'lt']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 ï
 lt
@@ -3002,7 +3002,7 @@ node_abs_1"AbsJY
 pkg.torch.onnx.class_hierarchyQ['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.bitwise_and.Tensor']Jú
 pkg.torch.onnx.fx_nodeÅ%bitwise_and_1 : [num_users=1] = call_function[target=torch.ops.aten.bitwise_and.Tensor](args = (%lt, %bitwise_and), kwargs = {})J3
 pkg.torch.onnx.name_scopes['', 'bitwise_and_1']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 í
 bitwise_and_1_to_copynode__to_copy"Cast*	
@@ -3011,7 +3011,7 @@ node_abs_1"AbsJY
 pkg.torch.onnx.class_hierarchyO['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten._to_copy.default']Jß
 pkg.torch.onnx.fx_nodeå%_to_copy : [num_users=3] = call_function[target=torch.ops.aten._to_copy.default](args = (%bitwise_and_1,), kwargs = {dtype: torch.float32})J.
 pkg.torch.onnx.name_scopes['', '_to_copy']J¶
-pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 73, in forward
+pkg.torch.onnx.stack_traceáFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
     number = self.model.number_in_force(extra)
 »
 
@@ -3026,7 +3026,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyo['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jæ
 pkg.torch.onnx.fx_node£%linear_3 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_9, %p_model_speed_head_weight, %p_model_speed_head_bias), kwargs = {})JB
 pkg.torch.onnx.name_scopes$['', 'model.speed_head', 'linear_3']J˛
-pkg.torch.onnx.stack_traceﬂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
+pkg.torch.onnx.stack_traceﬂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 75, in forward
     speed = self.model.speed_head(hidden_out) + self.model.trust(hidden_out) * number
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
@@ -3043,7 +3043,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyo['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¥
 pkg.torch.onnx.fx_nodeô%linear_4 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_9, %p_model_trust_weight, %p_model_trust_bias), kwargs = {})J=
 pkg.torch.onnx.name_scopes['', 'model.trust', 'linear_4']J˛
-pkg.torch.onnx.stack_traceﬂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
+pkg.torch.onnx.stack_traceﬂFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 75, in forward
     speed = self.model.speed_head(hidden_out) + self.model.trust(hidden_out) * number
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
@@ -3054,7 +3054,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jè
 pkg.torch.onnx.fx_nodeu%mul_13 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_4, %_to_copy), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_13']JÕ
-pkg.torch.onnx.stack_traceÆFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
+pkg.torch.onnx.stack_traceÆFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 75, in forward
     speed = self.model.speed_head(hidden_out) + self.model.trust(hidden_out) * number
 Å
 linear_3
@@ -3063,7 +3063,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jç
 pkg.torch.onnx.fx_nodes%add_10 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_3, %mul_13), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'add_10']JÕ
-pkg.torch.onnx.stack_traceÆFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 74, in forward
+pkg.torch.onnx.stack_traceÆFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 75, in forward
     speed = self.model.speed_head(hidden_out) + self.model.trust(hidden_out) * number
 †
 
@@ -3078,7 +3078,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyo['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jº
 pkg.torch.onnx.fx_node°%linear_5 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_9, %p_model_next_head_weight, %p_model_next_head_bias), kwargs = {})JA
 pkg.torch.onnx.name_scopes#['', 'model.next_head', 'linear_5']J‹
-pkg.torch.onnx.stack_traceΩFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 77, in forward
+pkg.torch.onnx.stack_traceΩFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
     following = (self.model.next_head(hidden_out) +
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
@@ -3095,7 +3095,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyo['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jæ
 pkg.torch.onnx.fx_node£%linear_6 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_9, %p_model_trust_next_weight, %p_model_trust_next_bias), kwargs = {})JB
 pkg.torch.onnx.name_scopes$['', 'model.trust_next', 'linear_6']JÇ
-pkg.torch.onnx.stack_trace„File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
+pkg.torch.onnx.stack_trace„File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
     self.model.trust_next(hidden_out) * torch.cat([number, number[..., :1] * 0], dim=-1))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
@@ -3109,7 +3109,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyK['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.slice.Tensor']Jê
 pkg.torch.onnx.fx_nodev%slice_5 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%_to_copy, 1, 0, 1), kwargs = {})J-
 pkg.torch.onnx.name_scopes['', 'slice_5']J—
-pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
+pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
     self.model.trust_next(hidden_out) * torch.cat([number, number[..., :1] * 0], dim=-1))
 ß
 slice_5
@@ -3118,7 +3118,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jû
 pkg.torch.onnx.fx_nodeÉ%mul_14 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%slice_5, %scalar_tensor_default_3), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_14']J—
-pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
+pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
     self.model.trust_next(hidden_out) * torch.cat([number, number[..., :1] * 0], dim=-1))
 £
 _to_copy
@@ -3129,7 +3129,7 @@ node_cat_1"Concat*
 pkg.torch.onnx.class_hierarchyJ['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.cat.default']Jì
 pkg.torch.onnx.fx_nodey%cat_1 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%_to_copy, %mul_14], -1), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'cat_1']J—
-pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
+pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
     self.model.trust_next(hidden_out) * torch.cat([number, number[..., :1] * 0], dim=-1))
 Ñ
 linear_6
@@ -3138,7 +3138,7 @@ node_cat_1"Concat*
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jå
 pkg.torch.onnx.fx_noder%mul_15 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_6, %cat_1), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_15']J—
-pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
+pkg.torch.onnx.stack_trace≤File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
     self.model.trust_next(hidden_out) * torch.cat([number, number[..., :1] * 0], dim=-1))
 ﬁ
 linear_5
@@ -3147,7 +3147,7 @@ node_cat_1"Concat*
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jç
 pkg.torch.onnx.fx_nodes%add_11 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_5, %mul_15), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'add_11']J´
-pkg.torch.onnx.stack_traceåFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 77, in forward
+pkg.torch.onnx.stack_traceåFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 78, in forward
     following = (self.model.next_head(hidden_out) +
 ´
 
@@ -3162,7 +3162,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyo['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¿
 pkg.torch.onnx.fx_node•%linear_7 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_9, %p_model_metres_head_weight, %p_model_metres_head_bias), kwargs = {})JC
 pkg.torch.onnx.name_scopes%['', 'model.metres_head', 'linear_7']J€
-pkg.torch.onnx.stack_traceºFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
+pkg.torch.onnx.stack_traceºFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 80, in forward
     metres = (self.model.metres_head(hidden_out) +
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
@@ -3179,7 +3179,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyo['nnslr_tools.brain_export.step_module.<locals>.Step', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¿
 pkg.torch.onnx.fx_node•%linear_8 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_9, %p_model_metres_gate_weight, %p_model_metres_gate_bias), kwargs = {})JC
 pkg.torch.onnx.name_scopes%['', 'model.metres_gate', 'linear_8']J˚
-pkg.torch.onnx.stack_trace‹File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 80, in forward
+pkg.torch.onnx.stack_trace‹File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 81, in forward
     self.model.metres_gate(hidden_out) * self.model.sign_metres(extra)[..., None])
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
@@ -3191,7 +3191,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.select.int']Jà
 pkg.torch.onnx.fx_noden%select : [num_users=1] = call_function[target=torch.ops.aten.select.int](args = (%extra, 1, 34), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'select']J 
-pkg.torch.onnx.stack_trace´File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 80, in forward
+pkg.torch.onnx.stack_trace´File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 81, in forward
     self.model.metres_gate(hidden_out) * self.model.sign_metres(extra)[..., None])
 †
 select
@@ -3200,7 +3200,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyP['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.unsqueeze.default']Jè
 pkg.torch.onnx.fx_nodeu%unsqueeze : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%select, 1), kwargs = {})J/
 pkg.torch.onnx.name_scopes['', 'unsqueeze']J 
-pkg.torch.onnx.stack_trace´File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 80, in forward
+pkg.torch.onnx.stack_trace´File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 81, in forward
     self.model.metres_gate(hidden_out) * self.model.sign_metres(extra)[..., None])
 Ö
 linear_8
@@ -3209,7 +3209,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.mul.Tensor']Jê
 pkg.torch.onnx.fx_nodev%mul_16 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_8, %unsqueeze), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'mul_16']J 
-pkg.torch.onnx.stack_trace´File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 80, in forward
+pkg.torch.onnx.stack_trace´File "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 81, in forward
     self.model.metres_gate(hidden_out) * self.model.sign_metres(extra)[..., None])
 ﬂ
 linear_7
@@ -3218,7 +3218,7 @@ hidden_out
 pkg.torch.onnx.class_hierarchyI['nnslr_tools.brain_export.step_module.<locals>.Step', 'aten.add.Tensor']Jç
 pkg.torch.onnx.fx_nodes%add_12 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_7, %mul_16), kwargs = {})J,
 pkg.torch.onnx.name_scopes['', 'add_12']J™
-pkg.torch.onnx.stack_traceãFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 79, in forward
+pkg.torch.onnx.stack_traceãFile "/root/sunnypilot.speedlimits/src/nnslr_tools/brain_export.py", line 80, in forward
     metres = (self.model.metres_head(hidden_out) +
 main_graph*ËBmodel.backbone.0.0.weightJ¿1û¥=DFÏ=:Õ=f·¬=1≤˜=ZÕ√=±J‘;-àx<pCø:,√ûΩD∆ΩÂöØΩb—£ΩëÀΩÓY†Ω5/∏ªT HºN⁄fª»&ßªÑiÌªMæıªFDÃª‚"ºÀpÊªˆ*´∫Ólù∫vTt:Üöùº¬Yº†ª|ó>‚J?™§>\#îæ∞
 ø2„öæ@6<-§Y<0_L;Ω0?Ô£?1—1?—ÄøH„•ø]K7ø

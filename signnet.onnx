@@ -15,9 +15,9 @@
 pkg.torch.onnx.class_hierarchy¸['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J®
 pkg.torch.onnx.fx_nodeç%_native_batch_norm_legit_no_training : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d, %p_net_s2_1_weight, %p_net_s2_1_bias, %b_net_s2_1_running_mean, %b_net_s2_1_running_var, 0.1, 1e-05), kwargs = {})Jg
 pkg.torch.onnx.name_scopesI['', 'net', 'net.s2', 'net.s2.1', '_native_batch_norm_legit_no_training']J≈
-pkg.torch.onnx.stack_trace¶File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¶File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 139, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
     x4 = self.s4(self.s2(images))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -30,9 +30,9 @@
 pkg.torch.onnx.class_hierarchy÷['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÑ
 pkg.torch.onnx.fx_nodej%relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem,), kwargs = {})JG
 pkg.torch.onnx.name_scopes)['', 'net', 'net.s2', 'net.s2.2', 'relu']J‹
-pkg.torch.onnx.stack_traceΩFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceΩFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 139, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
     x4 = self.s4(self.s2(images))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -53,9 +53,9 @@
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J¥
 pkg.torch.onnx.fx_nodeô%_native_batch_norm_legit_no_training_1 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_1, %p_net_s4_0_1_weight, %p_net_s4_0_1_bias, %b_net_s4_0_1_running_mean, %b_net_s4_0_1_running_var, 0.1, 1e-05), kwargs = {})Jw
 pkg.torch.onnx.name_scopesY['', 'net', 'net.s4', 'net.s4.0', 'net.s4.0.1', '_native_batch_norm_legit_no_training_1']J‡
-pkg.torch.onnx.stack_trace¡File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¡File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 139, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
     x4 = self.s4(self.s2(images))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -69,9 +69,9 @@
 pkg.torch.onnx.class_hierarchyˇ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_3,), kwargs = {})JW
 pkg.torch.onnx.name_scopes9['', 'net', 'net.s4', 'net.s4.0', 'net.s4.0.2', 'relu_1']J˜
-pkg.torch.onnx.stack_traceÿFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÿFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 139, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
     x4 = self.s4(self.s2(images))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -94,9 +94,9 @@
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J¥
 pkg.torch.onnx.fx_nodeô%_native_batch_norm_legit_no_training_2 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_2, %p_net_s4_1_1_weight, %p_net_s4_1_1_bias, %b_net_s4_1_1_running_mean, %b_net_s4_1_1_running_var, 0.1, 1e-05), kwargs = {})Jw
 pkg.torch.onnx.name_scopesY['', 'net', 'net.s4', 'net.s4.1', 'net.s4.1.1', '_native_batch_norm_legit_no_training_2']J‡
-pkg.torch.onnx.stack_trace¡File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¡File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 139, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
     x4 = self.s4(self.s2(images))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -110,9 +110,9 @@
 pkg.torch.onnx.class_hierarchyˇ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_6,), kwargs = {})JW
 pkg.torch.onnx.name_scopes9['', 'net', 'net.s4', 'net.s4.1', 'net.s4.1.2', 'relu_2']J˜
-pkg.torch.onnx.stack_traceÿFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÿFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 139, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
     x4 = self.s4(self.s2(images))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -135,9 +135,9 @@
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J¥
 pkg.torch.onnx.fx_nodeô%_native_batch_norm_legit_no_training_3 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_3, %p_net_s8_0_1_weight, %p_net_s8_0_1_bias, %b_net_s8_0_1_running_mean, %b_net_s8_0_1_running_var, 0.1, 1e-05), kwargs = {})Jw
 pkg.torch.onnx.name_scopesY['', 'net', 'net.s8', 'net.s8.0', 'net.s8.0.1', '_native_batch_norm_legit_no_training_3']J”
-pkg.torch.onnx.stack_trace¥File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¥File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
     x8 = self.s8(x4)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -151,9 +151,9 @@
 pkg.torch.onnx.class_hierarchyˇ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jà
 pkg.torch.onnx.fx_noden%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_9,), kwargs = {})JW
 pkg.torch.onnx.name_scopes9['', 'net', 'net.s8', 'net.s8.0', 'net.s8.0.2', 'relu_3']JÍ
-pkg.torch.onnx.stack_traceÀFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÀFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
     x8 = self.s8(x4)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -177,9 +177,9 @@ getitem_12node_Conv_159"Conv*
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J¥
 pkg.torch.onnx.fx_nodeô%_native_batch_norm_legit_no_training_4 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_4, %p_net_s8_1_1_weight, %p_net_s8_1_1_bias, %b_net_s8_1_1_running_mean, %b_net_s8_1_1_running_var, 0.1, 1e-05), kwargs = {})Jw
 pkg.torch.onnx.name_scopesY['', 'net', 'net.s8', 'net.s8.1', 'net.s8.1.1', '_native_batch_norm_legit_no_training_4']J”
-pkg.torch.onnx.stack_trace¥File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¥File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
     x8 = self.s8(x4)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -194,9 +194,9 @@ getitem_12relu_4node_relu_4"ReluJß
 pkg.torch.onnx.class_hierarchyˇ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_4 : [num_users=2] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_12,), kwargs = {})JW
 pkg.torch.onnx.name_scopes9['', 'net', 'net.s8', 'net.s8.1', 'net.s8.1.2', 'relu_4']JÍ
-pkg.torch.onnx.stack_traceÀFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÀFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 140, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
     x8 = self.s8(x4)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -220,9 +220,9 @@ getitem_15node_Conv_161"Conv*
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J∏
 pkg.torch.onnx.fx_nodeù%_native_batch_norm_legit_no_training_5 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_5, %p_net_s16_0_1_weight, %p_net_s16_0_1_bias, %b_net_s16_0_1_running_mean, %b_net_s16_0_1_running_var, 0.1, 1e-05), kwargs = {})Jz
 pkg.torch.onnx.name_scopes\['', 'net', 'net.s16', 'net.s16.0', 'net.s16.0.1', '_native_batch_norm_legit_no_training_5']J’
-pkg.torch.onnx.stack_trace∂File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace∂File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 142, in forward
     x16 = self.s16(x8)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -237,9 +237,9 @@ getitem_15relu_5node_relu_5"ReluJ™
 pkg.torch.onnx.class_hierarchyˇ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_5 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_15,), kwargs = {})JZ
 pkg.torch.onnx.name_scopes<['', 'net', 'net.s16', 'net.s16.0', 'net.s16.0.2', 'relu_5']JÏ
-pkg.torch.onnx.stack_traceÕFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÕFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 142, in forward
     x16 = self.s16(x8)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -263,9 +263,9 @@ getitem_18node_Conv_163"Conv*
 pkg.torch.onnx.class_hierarchy•['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J∏
 pkg.torch.onnx.fx_nodeù%_native_batch_norm_legit_no_training_6 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_6, %p_net_s16_1_1_weight, %p_net_s16_1_1_bias, %b_net_s16_1_1_running_mean, %b_net_s16_1_1_running_var, 0.1, 1e-05), kwargs = {})Jz
 pkg.torch.onnx.name_scopes\['', 'net', 'net.s16', 'net.s16.1', 'net.s16.1.1', '_native_batch_norm_legit_no_training_6']J’
-pkg.torch.onnx.stack_trace∂File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace∂File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 142, in forward
     x16 = self.s16(x8)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -280,9 +280,9 @@ getitem_18relu_6node_relu_6"ReluJ™
 pkg.torch.onnx.class_hierarchyˇ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_6 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_18,), kwargs = {})JZ
 pkg.torch.onnx.name_scopes<['', 'net', 'net.s16', 'net.s16.1', 'net.s16.1.2', 'relu_6']JÏ
-pkg.torch.onnx.stack_traceÕFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÕFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 141, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 142, in forward
     x16 = self.s16(x8)
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -308,9 +308,9 @@ asymmetric†*
 pkg.torch.onnx.class_hierarchyì['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'aten.upsample_nearest2d.vec']J¨
 pkg.torch.onnx.fx_nodeë%upsample_nearest2d : [num_users=1] = call_function[target=torch.ops.aten.upsample_nearest2d.vec](args = (%relu_6, [36, 112], None), kwargs = {})J?
 pkg.torch.onnx.name_scopes!['', 'net', 'upsample_nearest2d']Jº
-pkg.torch.onnx.stack_traceùFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceùFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 143, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 144, in forward
     up = nn.functional.interpolate(x16, size=skip.shape[-2:], mode='nearest')
 Ä
 upsample_nearest2d
@@ -320,9 +320,9 @@ asymmetric†*
 pkg.torch.onnx.class_hierarchyà['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'aten.cat.default']Jõ
 pkg.torch.onnx.fx_nodeÄ%cat : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%upsample_nearest2d, %relu_4], 1), kwargs = {})J0
 pkg.torch.onnx.name_scopes['', 'net', 'cat']J§
-pkg.torch.onnx.stack_traceÖFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceÖFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 144, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
     y = self.out(self.fuse(torch.cat([up, skip], 1)))
 Ñ
 cat
@@ -340,9 +340,9 @@ getitem_21node_Conv_165"Conv*
 pkg.torch.onnx.class_hierarchy¸['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm2d', 'aten._native_batch_norm_legit_no_training.default']J¥
 pkg.torch.onnx.fx_nodeô%_native_batch_norm_legit_no_training_7 : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%conv2d_7, %p_net_fuse_1_weight, %p_net_fuse_1_bias, %b_net_fuse_1_running_mean, %b_net_fuse_1_running_var, 0.1, 1e-05), kwargs = {})Jm
 pkg.torch.onnx.name_scopesO['', 'net', 'net.fuse', 'net.fuse.1', '_native_batch_norm_legit_no_training_7']JŸ
-pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace∫File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 144, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
     y = self.out(self.fuse(torch.cat([up, skip], 1)))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -356,9 +356,9 @@ getitem_21relu_7node_relu_7"ReluJ˘
 pkg.torch.onnx.class_hierarchy÷['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jâ
 pkg.torch.onnx.fx_nodeo%relu_7 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%getitem_21,), kwargs = {})JM
 pkg.torch.onnx.name_scopes/['', 'net', 'net.fuse', 'net.fuse.2', 'relu_7']J
-pkg.torch.onnx.stack_trace—File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace—File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 144, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
     y = self.out(self.fuse(torch.cat([up, skip], 1)))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/container.py", line 259, in forward
     input = module(input)
@@ -379,9 +379,9 @@ getitem_21relu_7node_relu_7"ReluJ˘
 pkg.torch.onnx.class_hierarchy´['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J≠
 pkg.torch.onnx.fx_nodeí%conv2d_8 : [num_users=2] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_7, %p_net_out_weight, %p_net_out_bias), kwargs = {})J@
 pkg.torch.onnx.name_scopes"['', 'net', 'net.out', 'conv2d_8']J›
-pkg.torch.onnx.stack_traceæFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_traceæFile "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 144, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
     y = self.out(self.fuse(torch.cat([up, skip], 1)))
   File "/root/sunnypilot.speedlimits/.venv-gpu/lib/python3.13/site-packages/torch/nn/modules/conv.py", line 565, in forward
     return self._conv_forward(input, self.weight, self.bias)
@@ -395,9 +395,9 @@ getitem_21relu_7node_relu_7"ReluJ˘
 pkg.torch.onnx.class_hierarchyâ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'aten.slice.Tensor']Jê
 pkg.torch.onnx.fx_nodev%slice_1 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%conv2d_8, 1, 0, 1), kwargs = {})J4
 pkg.torch.onnx.name_scopes['', 'net', 'slice_1']Jõ
-pkg.torch.onnx.stack_trace¸File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¸File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 146, in forward
     return torch.sigmoid(y[:, :1]), y[:, 1:]
 ﬂ
 slice_1sigmoidnode_sigmoid"SigmoidJ†
@@ -405,9 +405,9 @@ getitem_21relu_7node_relu_7"ReluJ˘
 pkg.torch.onnx.class_hierarchyå['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'aten.sigmoid.default']Jä
 pkg.torch.onnx.fx_nodep%sigmoid : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%slice_1,), kwargs = {})J4
 pkg.torch.onnx.name_scopes['', 'net', 'sigmoid']Jõ
-pkg.torch.onnx.stack_trace¸File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¸File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 146, in forward
     return torch.sigmoid(y[:, :1]), y[:, 1:]
 ï
 conv2d_8
@@ -419,9 +419,9 @@ getitem_21relu_7node_relu_7"ReluJ˘
 pkg.torch.onnx.class_hierarchyâ['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'nnslr_tools.signnet.build_signnet.<locals>.SignNet', 'aten.slice.Tensor']J£
 pkg.torch.onnx.fx_nodeà%slice_2 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%conv2d_8, 1, 1, 9223372036854775807), kwargs = {})J4
 pkg.torch.onnx.name_scopes['', 'net', 'slice_2']Jõ
-pkg.torch.onnx.stack_trace¸File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1007, in forward
+pkg.torch.onnx.stack_trace¸File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
     heat, shape = self.net(images)
-  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 145, in forward
+  File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 146, in forward
     return torch.sigmoid(y[:, :1]), y[:, 1:]
 
 sigmoid
@@ -432,7 +432,7 @@ node_cat_1"Concat*
 pkg.torch.onnx.class_hierarchyR['nnslr_tools.signnet.export_signnet_onnx.<locals>.OneOutput', 'aten.cat.default']Jí
 pkg.torch.onnx.fx_nodex%cat_1 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%sigmoid, %slice_2], 1), kwargs = {})J+
 pkg.torch.onnx.name_scopes['', 'cat_1']Jö
-pkg.torch.onnx.stack_trace|File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1008, in forward
+pkg.torch.onnx.stack_trace|File "/root/sunnypilot.speedlimits/src/nnslr_tools/signnet.py", line 1009, in forward
     return torch.cat([heat, shape], 1)
 main_graph*ﬁBnet.s2.0.weightJ¿≤¿=¨Kæ; æóÒº≠Înæ˜&rº§ä≤Ω}O¥<√§='“ü<ˆï'ΩeSÿΩgõ€ª*@<æ…Ωï“Ω:“qΩﬁ∑=O 9>d=êµÆΩﬁΩ|hüΩBïΩ∏&]Ω¸øªı¯>é>
 s‚>’	µ?ª$@üW@≈">ü{Jæ.ã ¿¥≥	¿O˚?xÆ?!÷˚>˜Ù…?52Æ? ¿¿≈T<?lm2¿´	:¿S˙
