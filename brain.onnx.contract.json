@@ -1,7 +1,7 @@
 {
   "architecture": "mobilenet_v3_small+gru",
-  "checkpoint": "brain:2026-11-10_2051-brain-s2/brain",
-  "checkpoint_sha256": "da686eeeeb68286f7fe950fe0c5a2c592b6e6d6673427114a038a2f9ac6adbf5",
+  "checkpoint": "brain:2026-11-11_2241-brain-s0/brain",
+  "checkpoint_sha256": "bb97a5b4890f90c4d56dfec4e1fffd8c512a9ee30c0753f8e0b71959e1769ced",
   "epoch": 39,
   "input": {
     "color": "RGB",
@@ -59,7 +59,7 @@
     }
   ],
   "inputs_sha256": "0d309056a32e48037e804302916398b71d4edd4fc765a62ea4906957d2d7e629",
-  "onnx_sha256": "ffc68a8126dc6b38d99850ff98729c1647d21545d61e5fa5ad3a9bea8fded133",
+  "onnx_sha256": "d54090e1381437c94e6ee3af56df5abc8bd3589568c989192d5179ebbfb8d801",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -310,9 +310,9 @@
   ],
   "reader": {
     "applicability": "cc1584009e9d773a1fdf43c9d7270933aff9c5ed5804aec3c01dc07ff5a490d7",
-    "classifier": "0a5d2c12a4ddf2625044db6433c7db2f2276c221e0b53cae95937ffc21735a4a",
-    "decider": "dda32baa34a5de9a87bf1c5f562b9dc58f7befc86019b527b85ef8b30e091a26",
-    "finder": "6bf5a3b4e963559da0714fff9eff3b4cc7b6c820cea7007ab9d04011dd933117",
+    "classifier": "5ee25484282c6bb3f31c65f4e74716cd5251c8bd8b1df6a90a7bc38ec1a4e2eb",
+    "decider": "cc6bc73991dfe84ffa6ebff6bf49f60229e33902627c3ed5766a85713be7b9f4",
+    "finder": "53d9187221e4df095ad546c70976444e87f069de0779c8dc35f2fd9f1b0f5439",
     "settings": {
       "carriageway_lag": 5.0,
       "confirm_frames": 2,
@@ -371,7 +371,7 @@
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 7.62939453125e-06,
+    "max_abs_error": 1.049041748046875e-05,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rollout": {
@@ -380,6 +380,8 @@
       "other_speed": 0,
       "route": "0000012d--6552a45378",
       "said": [
+        3,
+        4,
         5,
         6,
         7,
@@ -389,6 +391,8 @@
         11,
         12,
         13,
+        14,
+        15,
         16,
         17,
         18,
@@ -428,21 +432,26 @@
         52,
         53,
         54,
+        55,
+        56,
+        57,
+        58,
         60,
+        61,
+        62,
+        63,
         64,
         65,
         66,
+        67,
         68,
+        69,
         70,
-        72,
-        73,
-        74,
         75,
         76,
         77,
         78,
         79,
-        80,
         81,
         82,
         83,
@@ -470,12 +479,20 @@
         105,
         106,
         107,
-        115,
-        116,
-        117,
-        119,
+        108,
+        109,
+        110,
+        111,
+        113,
+        114,
+        118,
+        120,
         121
-      ]
+      ],
+      "tied_ahead": 0,
+      "tied_speed": 1,
+      "widest_gap": 3.814697265625e-06,
+      "widest_gap_ahead": 0.0
     },
     "rtol": 0.0001
   }

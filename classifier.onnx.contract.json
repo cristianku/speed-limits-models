@@ -1,8 +1,8 @@
 {
   "architecture": "mobilenet_v3_small",
-  "checkpoint": "classifier:2026-11-10_1546-classifier/classifier",
-  "checkpoint_sha256": "9d1c80e49414a6f8c0894595e63c1569f60c19ead4c16dddd698153eb7452ae5",
-  "dataset_sha256": "59d4c881f500a616a5b56d7175b40d72fe758e8ca5e1831a0652d891ebb929db",
+  "checkpoint": "classifier:2026-11-11_2155-classifier/classifier",
+  "checkpoint_sha256": "61f3c39d901522ac477c917c698243e61f912dd18f72ea71c6f590a4eff71a26",
+  "dataset_sha256": "0fb5f8d707ec1a9f45917d8fb20df1688ebbacab71f2d42a3c762c2c1e4a8ab0",
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -32,7 +32,7 @@
     ],
     "source": "reviewed_bbox_crop"
   },
-  "onnx_sha256": "0a5d2c12a4ddf2625044db6433c7db2f2276c221e0b53cae95937ffc21735a4a",
+  "onnx_sha256": "5ee25484282c6bb3f31c65f4e74716cd5251c8bd8b1df6a90a7bc38ec1a4e2eb",
   "output": {
     "classes": [
       "cancellation",
@@ -66,17 +66,22 @@
       "other_sign:main_road",
       "other_sign:motorway_direction",
       "other_sign:motorway_end",
+      "other_sign:motorway_start",
       "other_sign:no_entry",
       "other_sign:no_overtaking",
+      "other_sign:no_vehicles",
       "other_sign:other",
       "other_sign:pedestrian_crossing",
       "other_sign:priority_to_right",
+      "other_sign:roadworks",
       "other_sign:roundabout",
       "other_sign:stop",
       "other_sign:town_entry",
+      "other_sign:traffic_queue",
       "road_marking:30",
       "unreadable",
       "variable_display:100",
+      "variable_display:110",
       "variable_display:120",
       "variable_display:50",
       "variable_display:60",
@@ -91,18 +96,18 @@
     "number_semantics": "written_sign_value",
     "shape": [
       1,
-      49
+      54
     ],
     "unit_source": "runtime_country"
   },
   "schema_version": 1,
-  "split_sha256": "099812f1c3201a82b31e9ceaf3f4c4f7da3f2dddc321fd59fc147f0033fb0c33",
+  "split_sha256": "87bb26e9a039ae8e9101006c16c844484d4a58ecd37a07770e63b0885ec2368e",
   "task": "reader",
   "training_initialization": "mapillary_pretraining",
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 7.62939453125e-06,
+    "max_abs_error": 9.5367431640625e-06,
     "passed": true,
     "provider": "CPUExecutionProvider",
     "rtol": 0.0001
