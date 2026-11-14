@@ -10,6 +10,15 @@ it runs at boot after an update (a minute or two each, only for networks it has 
 speedvisiond; a network that fails to compile never fails the build and leaves only the speed limit reading out. A new
 model is a commit here and a move of the submodule pointer in the branch.
 
+## Licence
+
+The weights in this repository are **CC BY-NC-SA 4.0**: free to use, change and share for non-commercial purposes, with
+attribution and under the same licence. SignNet and the classifier learnt from the
+[Mapillary Traffic Sign Dataset](https://www.mapillary.com/dataset/trafficsign) (street photos from all over the world,
+© Mapillary, CC BY-NC-SA 4.0) before the recorded drives, so the weights carry its licence. None of its pictures is
+here. The code that trains and runs the networks is MIT
+([sunnypilot.smartspeed](https://github.com/cristianku/sunnypilot.smartspeed)).
+
 ## What is here
 
 - `speed_limits.json`: the networks in use and their version (format 2).
