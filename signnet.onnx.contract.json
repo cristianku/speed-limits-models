@@ -18,7 +18,7 @@
       896
     ]
   },
-  "onnx_sha256": "4b371c524e0a3ccfaf18a504c01d1c049aa94640dc699b2e659ce0e422aa5895",
+  "onnx_sha256": "344c2232ac9706ca627284c2d1df74780f9d5f0bb4d03b8167282f6e28b5dd73",
   "output": {
     "channels": [
       "heat",
@@ -41,7 +41,7 @@
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 2.86102294921875e-06,
+    "max_abs_error": 2.6226043701171875e-06,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rtol": 0.0001

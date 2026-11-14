@@ -1,8 +1,8 @@
 {
   "architecture": "mobilenet_v3_small",
-  "checkpoint": "classifier:2026-11-11_2155-classifier/classifier",
-  "checkpoint_sha256": "61f3c39d901522ac477c917c698243e61f912dd18f72ea71c6f590a4eff71a26",
-  "dataset_sha256": "0fb5f8d707ec1a9f45917d8fb20df1688ebbacab71f2d42a3c762c2c1e4a8ab0",
+  "checkpoint": "classifier:2026-11-13_2245-classifier/classifier",
+  "checkpoint_sha256": "764485c69462c833062ec4c583bc492c01e744d8e0a98cd272162d270c2209fb",
+  "dataset_sha256": "af8c4dc3f7ee9bdeb1b59ad4ca265ebecc90b87f987b278cf5bd67cfeebb4661",
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -32,7 +32,7 @@
     ],
     "source": "reviewed_bbox_crop"
   },
-  "onnx_sha256": "5ee25484282c6bb3f31c65f4e74716cd5251c8bd8b1df6a90a7bc38ec1a4e2eb",
+  "onnx_sha256": "21353b919a5e6a8cf5e13eaca9b36ecba22f3557e7da909bcfd080f401fb4b95",
   "output": {
     "classes": [
       "cancellation",
@@ -51,10 +51,12 @@
       "maximum_speed:90",
       "maximum_speed:unknown",
       "maximum_speed_hours:30",
+      "maximum_speed_hours:30:22-6",
       "maximum_speed_wet:100",
       "maximum_speed_wet:80",
       "not_a_sign",
       "other_sign",
+      "other_sign:ahead_only",
       "other_sign:danger_other",
       "other_sign:direction_left",
       "other_sign:direction_right",
@@ -77,6 +79,11 @@
       "other_sign:roundabout",
       "other_sign:stop",
       "other_sign:town_entry",
+      "other_sign:town_exit",
+      "other_sign:traffic_light_amber",
+      "other_sign:traffic_light_green",
+      "other_sign:traffic_light_off",
+      "other_sign:traffic_light_red",
       "other_sign:traffic_queue",
       "road_marking:30",
       "unreadable",
@@ -96,18 +103,18 @@
     "number_semantics": "written_sign_value",
     "shape": [
       1,
-      54
+      61
     ],
     "unit_source": "runtime_country"
   },
   "schema_version": 1,
-  "split_sha256": "87bb26e9a039ae8e9101006c16c844484d4a58ecd37a07770e63b0885ec2368e",
+  "split_sha256": "ff7e375772a77abf6f74df853b7f5ea6fb5763ef548b57c1c17a6be97d2e1201",
   "task": "reader",
   "training_initialization": "mapillary_pretraining",
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 9.5367431640625e-06,
+    "max_abs_error": 1.1444091796875e-05,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rtol": 0.0001

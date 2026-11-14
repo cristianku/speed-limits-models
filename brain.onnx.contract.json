@@ -1,7 +1,7 @@
 {
   "architecture": "mobilenet_v3_small+gru",
-  "checkpoint": "brain:2026-11-11_2241-brain-s0/brain",
-  "checkpoint_sha256": "bb97a5b4890f90c4d56dfec4e1fffd8c512a9ee30c0753f8e0b71959e1769ced",
+  "checkpoint": "brain:2026-11-13_2309-brain-s0/brain",
+  "checkpoint_sha256": "801eff63372ebc1f5c7aef727d3733aca3342c4e5da96c9a7393ea75a7937de9",
   "epoch": 39,
   "input": {
     "color": "RGB",
@@ -46,7 +46,7 @@
       "name": "extra",
       "shape": [
         1,
-        44
+        288
       ]
     },
     {
@@ -58,8 +58,8 @@
       ]
     }
   ],
-  "inputs_sha256": "0d309056a32e48037e804302916398b71d4edd4fc765a62ea4906957d2d7e629",
-  "onnx_sha256": "12741de493e35c368180cee854d2bffac85a8d672f100ff41f4559ca373c1c94",
+  "inputs_sha256": "c12716e61d873c3a34510ae58747ec3af934e17fc3e0344fa7945bca5cec8d36",
+  "onnx_sha256": "371507344113ece35bdf5c466a957acabc40f9caf093def11a15dbd6715babda",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -264,8 +264,18 @@
       199,
       200
     ],
-    "metres_scale": 100.0,
     "name": "speed",
+    "road_types": [
+      "town",
+      "rural",
+      "expressway",
+      "motorway",
+      "ramp",
+      "parking",
+      "zone30",
+      "garage",
+      "merge"
+    ],
     "shape": [
       1,
       200
@@ -282,20 +292,11 @@
     },
     {
       "dtype": "float32",
-      "meaning": "the next limit: kph[argmax], none for the last class",
-      "name": "next",
+      "meaning": "the road type: road_types[argmax], shown on the screen only",
+      "name": "road_type",
       "shape": [
         1,
-        201
-      ]
-    },
-    {
-      "dtype": "float32",
-      "meaning": "the metres to it over metres_scale",
-      "name": "metres",
-      "shape": [
-        1,
-        1
+        9
       ]
     },
     {
@@ -310,9 +311,9 @@
   ],
   "reader": {
     "applicability": "cc1584009e9d773a1fdf43c9d7270933aff9c5ed5804aec3c01dc07ff5a490d7",
-    "classifier": "5ee25484282c6bb3f31c65f4e74716cd5251c8bd8b1df6a90a7bc38ec1a4e2eb",
+    "classifier": "21353b919a5e6a8cf5e13eaca9b36ecba22f3557e7da909bcfd080f401fb4b95",
     "decider": "cc6bc73991dfe84ffa6ebff6bf49f60229e33902627c3ed5766a85713be7b9f4",
-    "finder": "53d9187221e4df095ad546c70976444e87f069de0779c8dc35f2fd9f1b0f5439",
+    "finder": "e932da8ed5ece5216c340a9c6b72b7b169f4ce970013db02ff9575c29e6809a7",
     "settings": {
       "carriageway_lag": 5.0,
       "confirm_frames": 2,
@@ -347,10 +348,12 @@
       "lead",
       "country",
       "plate_wet",
-      "sign_distance",
-      "motion"
+      "motion",
+      "road_signs",
+      "sign_boxes",
+      "light_boxes"
     ],
-    "hours": false,
+    "hours": true,
     "inputs": [
       "image",
       "extra",
@@ -359,28 +362,25 @@
     "memory_gap_seconds": 5.0,
     "outputs": [
       "speed",
-      "next",
-      "metres",
+      "road_type",
       "hidden_out"
     ],
     "picture": "brain",
-    "plates": false,
+    "plates": true,
     "rate_hz": 4.0,
     "wet": false
   },
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 8.58306884765625e-06,
+    "max_abs_error": 1.627206802368164e-05,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rollout": {
       "frames": 11040,
-      "other_ahead": 0,
       "other_speed": 0,
       "route": "0000012d--6552a45378",
       "said": [
-        3,
         4,
         5,
         6,
@@ -431,11 +431,9 @@
         51,
         52,
         53,
-        54,
-        55,
-        56,
         57,
         58,
+        59,
         60,
         61,
         62,
@@ -447,11 +445,16 @@
         68,
         69,
         70,
+        71,
+        72,
+        73,
+        74,
         75,
         76,
         77,
         78,
         79,
+        80,
         81,
         82,
         83,
@@ -469,7 +472,6 @@
         95,
         96,
         97,
-        98,
         99,
         100,
         101,
@@ -483,16 +485,15 @@
         109,
         110,
         111,
-        113,
         114,
+        117,
         118,
+        119,
         120,
         121
       ],
-      "tied_ahead": 0,
-      "tied_speed": 1,
-      "widest_gap": 2.86102294921875e-06,
-      "widest_gap_ahead": 0.0
+      "tied_speed": 0,
+      "widest_gap": 0.0
     },
     "rtol": 0.0001
   }
