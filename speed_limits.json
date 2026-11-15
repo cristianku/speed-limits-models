@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-11-14",
+  "version": "2026-11-15",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"
@@ -8,10 +8,6 @@
   "classifier": {
     "file": "classifier.onnx",
     "contract": "classifier.onnx.contract.json"
-  },
-  "decider": {
-    "file": "decider.onnx",
-    "contract": "decider.onnx.contract.json"
   },
   "brain": {
     "file": "brain.onnx",

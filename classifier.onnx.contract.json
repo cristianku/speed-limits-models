@@ -1,8 +1,8 @@
 {
   "architecture": "mobilenet_v3_small",
-  "checkpoint": "classifier:2026-11-13_2245-classifier/classifier",
-  "checkpoint_sha256": "764485c69462c833062ec4c583bc492c01e744d8e0a98cd272162d270c2209fb",
-  "dataset_sha256": "af8c4dc3f7ee9bdeb1b59ad4ca265ebecc90b87f987b278cf5bd67cfeebb4661",
+  "checkpoint": "classifier:2026-11-15_1315-classifier/classifier",
+  "checkpoint_sha256": "3eeb5b4f7b6bb653da0a81fed5e3a228c2ec23ba41c057a1f27799b56070f899",
+  "dataset_sha256": "9699141910a13614b64b33f503215c2c8c6c8f0ae66ccdab1289fcf50557e561",
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -32,7 +32,7 @@
     ],
     "source": "reviewed_bbox_crop"
   },
-  "onnx_sha256": "21353b919a5e6a8cf5e13eaca9b36ecba22f3557e7da909bcfd080f401fb4b95",
+  "onnx_sha256": "63a5959e4ca614e32bc411d0a77bef66182234b5f10ed9c67bc970b14b9cf926",
   "output": {
     "classes": [
       "cancellation",
@@ -57,6 +57,7 @@
       "not_a_sign",
       "other_sign",
       "other_sign:ahead_only",
+      "other_sign:children",
       "other_sign:danger_other",
       "other_sign:direction_left",
       "other_sign:direction_right",
@@ -103,14 +104,14 @@
     "number_semantics": "written_sign_value",
     "shape": [
       1,
-      61
+      62
     ],
     "unit_source": "runtime_country"
   },
   "schema_version": 1,
-  "split_sha256": "ff7e375772a77abf6f74df853b7f5ea6fb5763ef548b57c1c17a6be97d2e1201",
+  "split_sha256": "174385a598d8fd67a388aa65dbce54d9cefcca9ccf4dbe0a5163be151e2fcc0b",
   "task": "reader",
-  "training_initialization": "mapillary_pretraining",
+  "training_initialization": "checkpoint",
   "verification": {
     "atol": 1e-05,
     "enabled": true,
