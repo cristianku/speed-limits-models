@@ -1,8 +1,8 @@
 {
   "architecture": "mobilenet_v3_small",
-  "checkpoint": "classifier:2026-11-15_1315-classifier/classifier",
-  "checkpoint_sha256": "3eeb5b4f7b6bb653da0a81fed5e3a228c2ec23ba41c057a1f27799b56070f899",
-  "dataset_sha256": "9699141910a13614b64b33f503215c2c8c6c8f0ae66ccdab1289fcf50557e561",
+  "checkpoint": "classifier:2026-11-15_2155-classifier/classifier",
+  "checkpoint_sha256": "99eb44f5683b39fa98c327f60515c3385baf496603cf3ef986fbd40fdd6cc030",
+  "dataset_sha256": "9c8e752d4e060ffec24743e62a5a3b6b4c1da4cbbe3b8f571dafe790c8128c54",
   "input": {
     "color": "RGB",
     "dtype": "float32",
@@ -32,7 +32,7 @@
     ],
     "source": "reviewed_bbox_crop"
   },
-  "onnx_sha256": "63a5959e4ca614e32bc411d0a77bef66182234b5f10ed9c67bc970b14b9cf926",
+  "onnx_sha256": "98b124f50d3e33a18e596ae84748b94eca8efe009e84aaf69daa19915f2260eb",
   "output": {
     "classes": [
       "cancellation",
@@ -109,13 +109,13 @@
     "unit_source": "runtime_country"
   },
   "schema_version": 1,
-  "split_sha256": "174385a598d8fd67a388aa65dbce54d9cefcca9ccf4dbe0a5163be151e2fcc0b",
+  "split_sha256": "f44e2ba234b5cc0b9835e7d29171b6a354ad46ec2d7bec4bc66e37d3b990d1f1",
   "task": "reader",
-  "training_initialization": "checkpoint",
+  "training_initialization": "mapillary_pretraining",
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 1.1444091796875e-05,
+    "max_abs_error": 2.09808349609375e-05,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rtol": 0.0001

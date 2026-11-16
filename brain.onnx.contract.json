@@ -1,7 +1,7 @@
 {
   "architecture": "mobilenet_v3_small+gru",
-  "checkpoint": "brain:2026-11-15_1851-brain-s0/brain",
-  "checkpoint_sha256": "d055a3af0af1f57993b828dfb90f238fdb98502de9a6c9b853a37edbc376aba7",
+  "checkpoint": "brain:2026-11-16_1353-brain-s2/brain",
+  "checkpoint_sha256": "e76b4e05eb6c8de8c43e5eba4b9e506ca76cf2ee3e7340d7ba03a6e0a187fea8",
   "epoch": 39,
   "input": {
     "color": "RGB",
@@ -46,7 +46,7 @@
       "name": "extra",
       "shape": [
         1,
-        532
+        534
       ]
     },
     {
@@ -58,8 +58,8 @@
       ]
     }
   ],
-  "inputs_sha256": "6e1960feffe03ca96cc6db3a884ff9d056a43aafe01c3c03001feebbd1102fb3",
-  "onnx_sha256": "3c155e4fac1ddd432e3043db80a4bc1069fb23d1ee6326d48a5936cd44ddb42f",
+  "inputs_sha256": "b21d06e1ced966207431f647b91f44028b8f7eda8c863d90340bff42883530f6",
+  "onnx_sha256": "1f60f17831b0561b6ee1b6c7d75d886cbf582bedbb81bc8bbf431c6e5105fa9f",
   "output": {
     "decode": "kph[argmax(speed)]",
     "kph": [
@@ -310,7 +310,7 @@
     }
   ],
   "reader": {
-    "classifier": "63a5959e4ca614e32bc411d0a77bef66182234b5f10ed9c67bc970b14b9cf926",
+    "classifier": "98b124f50d3e33a18e596ae84748b94eca8efe009e84aaf69daa19915f2260eb",
     "finder": "715225634a6cf98b6cff2a2345ef3547a3486c4e866287b39c715ae7c1611d0d",
     "settings": {
       "carriageway_lag": 5.0,
@@ -367,12 +367,13 @@
     "picture": "brain",
     "plates": true,
     "rate_hz": 4.0,
+    "road_sign_kinds": 50,
     "wet": false
   },
   "task": "brain",
   "verification": {
     "atol": 0.0001,
-    "max_abs_error": 1.919269561767578e-05,
+    "max_abs_error": 4.76837158203125e-06,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rollout": {
@@ -386,9 +387,10 @@
         7,
         8,
         9,
-        10,
+        11,
         12,
         13,
+        14,
         15,
         16,
         17,
@@ -399,9 +401,6 @@
         22,
         23,
         24,
-        25,
-        26,
-        27,
         28,
         29,
         30,
@@ -431,14 +430,13 @@
         54,
         55,
         56,
+        57,
         58,
         59,
         60,
-        61,
         62,
         63,
         64,
-        65,
         66,
         67,
         68,
@@ -450,8 +448,6 @@
         74,
         75,
         76,
-        77,
-        78,
         79,
         80,
         81,
@@ -459,36 +455,31 @@
         83,
         84,
         85,
-        86,
         87,
         88,
+        89,
         90,
         91,
         92,
+        93,
         94,
+        95,
+        96,
+        97,
+        98,
         99,
         100,
         101,
-        102,
-        103,
-        104,
         105,
         107,
-        108,
-        109,
         110,
-        111,
-        112,
         113,
         114,
         115,
         116,
         117,
         118,
-        119,
-        120,
-        121,
-        123
+        119
       ],
       "tied_speed": 0,
       "widest_gap": 0.0
