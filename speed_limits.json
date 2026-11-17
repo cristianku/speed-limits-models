@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "2026-11-16",
+  "version": "2026-11-17",
   "finder": {
     "file": "signnet.onnx",
     "contract": "signnet.onnx.contract.json"

@@ -115,7 +115,7 @@
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 2.09808349609375e-05,
+    "max_abs_error": 7.62939453125e-06,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rtol": 0.0001
