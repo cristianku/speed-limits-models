@@ -1,6 +1,6 @@
 {
-  "checkpoint": "cutter:2026-11-16_2034-cutter/signnet",
-  "checkpoint_sha256": "2146230934c55bcc1069931490efcd55916a49a49748515bb558afdadcbe52c9",
+  "checkpoint": "cutter:2026-11-25_1254-cutter/signnet",
+  "checkpoint_sha256": "50da4588e8e53bcee6e65e737fb49af7208fd778aefec124fdd63a3bdb86125d",
   "epoch": 5,
   "fuse_kernel": 1,
   "input": {
@@ -18,7 +18,7 @@
       896
     ]
   },
-  "onnx_sha256": "e7bbc63e68ee8c566c6e2d2a03b307811c20c1dea302aa003fc55ade2c21968a",
+  "onnx_sha256": "8348475cae3ad6c0f0e5ea0711a8b6f60ab32e2d128d1368a0708d8ed489c6a1",
   "output": {
     "channels": [
       "heat",
@@ -41,7 +41,7 @@
   "verification": {
     "atol": 1e-05,
     "enabled": true,
-    "max_abs_error": 2.6226043701171875e-06,
+    "max_abs_error": 2.384185791015625e-06,
     "passed": true,
     "provider": "CUDAExecutionProvider",
     "rtol": 0.0001
